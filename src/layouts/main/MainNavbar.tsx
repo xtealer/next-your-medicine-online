@@ -6,7 +6,6 @@ import {
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Flex,
@@ -19,9 +18,9 @@ import { useRouter } from "next/router";
 
 const routes = [
   { name: "Store", path: "/" },
+  { name: "Buy Ozempic", path: "/products/ozempic" },
   { name: "About Us", path: "/#about-us" },
   { name: "Contact", path: "/#contact-us" },
-  { name: "Terms of Service", path: "/service-terms" },
 ];
 
 const MainNavbar: FC = () => {

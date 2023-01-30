@@ -13,7 +13,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
     <Flex flexDirection="column" bg="white" h="full">
       <MainNavbar />
       <Flex flex="1" flexDirection="column" overflowY="scroll">
-        <Flex flex="1" flexDirection="column">
+        <Flex flex="1" flexDirection="column" minH="calc(100vh - 100px)">
           {children}
         </Flex>
         <MainFooter />

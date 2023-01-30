@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import { NextPageWithLayout } from "@/types/Layout";
 import MainLayout from "@/layouts/main/MainLayout";
+import HomeProductsCarousel from "@/components/home/HomeProductsCarousel";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -10,6 +11,7 @@ const Home: NextPageWithLayout = () => {
         <title>Buy Ozempic Now</title>
         <meta name="keywords" content="Ozempic,Ozempic Online,Ozempic Paypal" />
       </Head>
+      <HomeProductsCarousel />
     </>
   );
 };
