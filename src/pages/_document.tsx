@@ -75,13 +75,13 @@ class MyDocument extends Document {
 
           <meta
             name="twitter:card"
-            content="Helping people find medications that are unavailable for less."
+            content="Helping people find medications out of stock for less."
           />
           <meta name="twitter:url" content="https://yourmedicine.online/" />
           <meta name="twitter:title" content="Your Medicine Online" />
           <meta
             name="twitter:description"
-            content="Helping people find medications that are unavailable for less."
+            content="Helping people find medications out of stock for less."
           />
           <meta
             name="twitter:image"
@@ -89,18 +89,12 @@ class MyDocument extends Document {
           />
           <meta name="twitter:creator" content="@xtealer" />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="Helping people find medications that are unavailable for less."
-          />
+          <meta property="og:title" content="Your Medicine Online" />
           <meta
             property="og:description"
-            content="Helping people find medications that are unavailable for less."
+            content="Helping people find medications out of stock for less."
           />
-          <meta
-            property="og:site_name"
-            content="Helping people find medications that are unavailable for less."
-          />
+          <meta property="og:site_name" content="Your Medicine Online" />
           <meta property="og:url" content="https://yourmedicine.online/" />
           <meta
             property="og:image"
