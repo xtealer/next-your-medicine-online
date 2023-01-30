@@ -105,10 +105,11 @@ class MyDocument extends Document {
             content="Helping people find medications that are unavailable or out of stock."
           />
           <meta property="og:url" content="https://yourmedicine.online/" />
-          {/* <meta
+          <meta
             property="og:image"
             content="https://yourmedicine.online/og-image.jpg"
-          /> */}
+          />
+          <meta property="og:image:type" content="image/jpg" />
           <meta
             property="og:image:url"
             content="https://yourmedicine.online/og-image.jpg"
