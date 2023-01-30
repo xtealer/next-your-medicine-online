@@ -107,10 +107,11 @@ class MyDocument extends Document {
           <meta property="og:url" content="https://yourmedicine.online/" />
           <meta
             property="og:image"
-            content="https://yourmedicine.online/og-image.jpg"
+            content="https://yourmedicine.online/og-image.png"
           />
-          <meta property="og:image:width" content="1200px" />
-          <meta property="og:image:height" content="630px" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="fb:app:id" content="3272783966308179" />
           {/* <link rel='apple-touch-startup-image' href='/images/apple_splash_2048.png' sizes='2048x2732' />
 <link rel='apple-touch-startup-image' href='/images/apple_splash_1668.png' sizes='1668x2224' />
 <link rel='apple-touch-startup-image' href='/images/apple_splash_1536.png' sizes='1536x2048' />
