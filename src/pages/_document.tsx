@@ -42,7 +42,10 @@ class MyDocument extends Document {
           <meta name="msapplication-tap-highlight" content="no" />
           <meta name="theme-color" content="#123087" />
 
-          <link rel="apple-touch-icon" href="/touch-icon-iphone.png" />
+          <link
+            rel="apple-touch-icon"
+            href="https://yourmedicine.online/touch-icon-iphone.png"
+          />
           {/* <link rel="apple-touch-icon" sizes="152x152" href="/icons/touch-icon-ipad.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/touch-icon-iphone-retina.png" />
 <link rel="apple-touch-icon" sizes="167x167" href="/icons/touch-icon-ipad-retina.png" /> */}
@@ -51,17 +54,24 @@ class MyDocument extends Document {
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/favicon-32x32.png"
+            href="https://yourmedicine.online/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/favicon-16x16.png"
+            href="https://yourmedicine.online/favicon-16x16.png"
           />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link
+            rel="mask-icon"
+            href="https://yourmedicine.online/safari-pinned-tab.svg"
+            color="#000000"
+          />
+          <link
+            rel="shortcut icon"
+            href="https://yourmedicine.online/favicon.ico"
+          />
 
           <meta
             name="twitter:card"
@@ -76,7 +86,10 @@ class MyDocument extends Document {
             name="twitter:description"
             content="Helping people find medications that are unavailable or out of stock."
           />
-          <meta name="twitter:image" content="/android-chrome-192x192.png" />
+          <meta
+            name="twitter:image"
+            content="https://yourmedicine.online/android-chrome-192x192.png"
+          />
           <meta name="twitter:creator" content="@xtealer" />
           <meta property="og:type" content="website" />
           <meta
@@ -92,9 +105,12 @@ class MyDocument extends Document {
             content="Helping people find medications that are unavailable or out of stock."
           />
           <meta property="og:url" content="https://yourmedicine.online/" />
-          <meta property="og:image" content="/og-image.jpg" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
+          <meta
+            property="og:image"
+            content="https://yourmedicine.online/og-image.jpg"
+          />
+          <meta property="og:image:width" content="1200px" />
+          <meta property="og:image:height" content="630px" />
           {/* <link rel='apple-touch-startup-image' href='/images/apple_splash_2048.png' sizes='2048x2732' />
 <link rel='apple-touch-startup-image' href='/images/apple_splash_1668.png' sizes='1668x2224' />
 <link rel='apple-touch-startup-image' href='/images/apple_splash_1536.png' sizes='1536x2048' />
