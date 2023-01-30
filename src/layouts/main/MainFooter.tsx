@@ -27,7 +27,7 @@ const subFooterLinks = [
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
+    <Text fontWeight={"500"} fontSize={"lg"} mb={2} textColor="white">
       {children}
     </Text>
   );
@@ -76,56 +76,98 @@ const MainFooter: FC = () => {
                   </Link>
                 </Flex>
               </Box>
-              <Text fontSize={"sm"} color="white">
+              <Text fontSize={"sm"} color="white" textColor="white">
                 © YourMedicineOnline {new Date().getFullYear()} All rights
                 reserved
               </Text>
             </Stack>
             <Stack align={{ base: "center", md: "flex-start" }}>
               <ListHeader>Products</ListHeader>
-              <Link href={"/"}>Store</Link>
-              <Link href={"/products/ozempic"}>Buy Ozempic</Link>
-              <ChakraLink href={"/#contact-us"}>Tutorials</ChakraLink>
-              <Link href={"/products/ozempic"}>Pricing</Link>
-              <Link href={"/products/ozempic"}>Releases</Link>
+              <Link href={"/"}>
+                <Text textColor="white">Store</Text>
+              </Link>
+              <Link href={"/products/ozempic"}>
+                <Text textColor="white">Buy Ozempic</Text>
+              </Link>
+              <ChakraLink textColor="white" href={"/#contact-us"}>
+                Tutorials
+              </ChakraLink>
+              <Link href={"/products/ozempic"}>
+                <Text textColor="white">Pricing</Text>
+              </Link>
+              <Link href={"/products/ozempic"}>
+                <Text textColor="white">Releases</Text>
+              </Link>
             </Stack>
             {/* <Stack align={{ base: "center", md: "flex-start" }}>
               <ListHeader>Company</ListHeader>
-              <ChakraLink href={"#"}>About</ChakraLink>
-              <ChakraLink href={"#"}>Press</ChakraLink>
-              <ChakraLink href={"#"}>Careers</ChakraLink>
-              <ChakraLink href={"#"}>Contact</ChakraLink>
-              <ChakraLink href={"#"}>Partners</ChakraLink>
+              <ChakraLink textColor="white" href={"#"}>About</ChakraLink>
+              <ChakraLink textColor="white" href={"#"}>Press</ChakraLink>
+              <ChakraLink textColor="white" href={"#"}>Careers</ChakraLink>
+              <ChakraLink textColor="white" href={"#"}>Contact</ChakraLink>
+              <ChakraLink textColor="white" href={"#"}>Partners</ChakraLink>
             </Stack> */}
             <Stack align={{ base: "center", md: "flex-start" }}>
               <ListHeader>Support</ListHeader>
-              <ChakraLink href={"/#contact-us"}>Help Center</ChakraLink>
-              <ChakraLink href={"/#contact-us"}>Contact us</ChakraLink>
-              <ChakraLink href={"/terms-of-service"} isExternal>
+              <ChakraLink textColor="white" href={"/#contact-us"}>
+                Help Center
+              </ChakraLink>
+              <ChakraLink textColor="white" href={"/#contact-us"}>
+                Contact us
+              </ChakraLink>
+              <ChakraLink
+                textColor="white"
+                href={"/terms-of-service"}
+                isExternal
+              >
                 Terms of Service
               </ChakraLink>
-              <ChakraLink href={"/terms-of-service"} isExternal>
+              <ChakraLink
+                textColor="white"
+                href={"/terms-of-service"}
+                isExternal
+              >
                 Legal
               </ChakraLink>
-              <ChakraLink href={"/privacy-policy"} isExternal>
+              <ChakraLink textColor="white" href={"/privacy-policy"} isExternal>
                 Privacy Policy
               </ChakraLink>
             </Stack>
             <Stack align={{ base: "center", md: "flex-start" }}>
               <ListHeader>Follow Us</ListHeader>
-              <ChakraLink href={"https://facebook.com/"} isExternal>
+              <ChakraLink
+                textColor="white"
+                href={"https://facebook.com/"}
+                isExternal
+              >
                 Facebook
               </ChakraLink>
-              <ChakraLink href={"https://twitter.com/"} isExternal>
+              <ChakraLink
+                textColor="white"
+                href={"https://twitter.com/"}
+                isExternal
+              >
                 Twitter
               </ChakraLink>
-              <ChakraLink href={"https://dribbble.com/"} isExternal>
+              <ChakraLink
+                textColor="white"
+                href={"https://dribbble.com/"}
+                isExternal
+              >
                 Dribbble
               </ChakraLink>
-              <ChakraLink href={"https://instagram.com/"} isExternal>
+              <ChakraLink
+                textColor="white"
+                href={"https://instagram.com/"}
+                isExternal
+              >
                 Instagram
               </ChakraLink>
-              <ChakraLink href={"https://linkedin.com/"} isExternal>
+              <ChakraLink
+                textColor="white"
+                href={"https://linkedin.com/"}
+                isExternal
+              >
                 LinkedIn
               </ChakraLink>
             </Stack>
