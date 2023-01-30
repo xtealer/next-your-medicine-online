@@ -107,12 +107,12 @@ class MyDocument extends Document {
           <meta property="og:url" content="https://yourmedicine.online/" />
           <meta
             property="og:image"
-            content="https://yourmedicine.online/og-image.jpg"
+            content="https://yourmedicine.online/og-image.jpeg"
           />
-          <meta property="og:image:type" content="image/jpg" />
+          <meta property="og:image:type" content="image/jpeg" />
           <meta
             property="og:image:url"
-            content="https://yourmedicine.online/og-image.jpg"
+            content="https://yourmedicine.online/og-image.jpeg"
           />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
