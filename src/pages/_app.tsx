@@ -1,14 +1,31 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+
+import { AppPropsWithLayout } from "@/types/Layout";
+import AppProviders from "@/AppProviders";
+import { Inter } from "@next/font/google";
 import Head from "next/head";
 
-export default function App({ Component, pageProps }: AppProps) {
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page) => page);
+
   return (
-    <>
+    <AppProviders>
       <Head>
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+        />
       </Head>
-      <Component {...pageProps} />
-    </>
+      <style jsx global className={inter.variable}>{`
+        html {
+          font-family: ${inter.style.fontFamily} !important;
+        }
+      `}</style>
+      {getLayout(<Component {...pageProps} />)}
+    </AppProviders>
   );
 }
