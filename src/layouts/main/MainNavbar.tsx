@@ -1,6 +1,5 @@
 import { FC, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { MdDownload } from "react-icons/md";
 import {
   Button,
   Drawer,
@@ -18,12 +17,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const gameRoutes = [
-  { name: "Main Menu", path: "/" },
-  { name: "Gallery", path: "/gallery" },
-];
-const secondaryRoutes = [
-  { name: "Privacy Policy", path: "/privacy-policy" },
+const routes = [
+  { name: "Store", path: "/" },
+  { name: "About Us", path: "/#about-us" },
+  { name: "Contact", path: "/#contact-us" },
   { name: "Terms of Service", path: "/service-terms" },
 ];
 
@@ -42,63 +39,35 @@ const MainNavbar: FC = () => {
       minH="100px"
       flex="0"
     >
-      <Button
-        w="40px"
-        ref={btnRef}
-        colorScheme="transparent"
-        onClick={onOpen}
-        p={1}
-        display={{ base: "unset", md: "none" }}
-        mr="3"
-      >
-        <RxHamburgerMenu color="#fff" size={30} />
-      </Button>
-
-      <Flex
-        justifyContent="center"
-        alignItems="center"
-        ml={{ base: "auto", md: "0" }}
-        mr={{ base: "auto", md: "0" }}
-        userSelect="none"
-      >
-        <Flex h="100%" w="auto">
-          <Link href="/">
-            <Image
-              style={{
-                height: "100%",
-                width: "min-content",
-              }}
-              src="/images/logo-full.png"
-              height={126.25}
-              width={329.25}
-              alt="Logo of Your Medicine Online"
-              draggable={false}
-            />
-          </Link>
-        </Flex>
-        <Text
-          textColor="white"
-          fontWeight="bold"
-          fontSize={{ base: "md", md: "2xl" }}
-          ml={{ base: "2", lg: "3" }}
-        >
-          ARTI PARTY
-        </Text>
+      <Flex h="100%" w="auto">
+        <Link href="/">
+          <Image
+            style={{
+              height: "100%",
+              width: "min-content",
+            }}
+            src="/images/logo-full.png"
+            height={126.25}
+            width={329.25}
+            alt="Logo of Your Medicine Online"
+            draggable={false}
+          />
+        </Link>
       </Flex>
-
       <Flex
         direction="row"
-        ml="6"
         align="center"
-        gap={4}
+        justify="center"
+        gap={8}
         display={{ base: "none", md: "flex" }}
         flex="1"
       >
-        {gameRoutes.map((r) => {
+        {routes.map((r) => {
           return (
             <Link key={`${r.name}_${r.path}`} href={r.path}>
               <Text
-                textColor="white"
+                textColor={pathname === r.path ? "primary._" : "black"}
+                _hover={{ color: "secondary._" }}
                 p="1"
                 textDecorationLine={pathname === r.path ? "underline" : "none"}
               >
@@ -107,23 +76,24 @@ const MainNavbar: FC = () => {
             </Link>
           );
         })}
-        <Flex ml="auto" gap={4}>
-          {secondaryRoutes.map((r) => {
-            return (
-              <Link key={`${r.name}_${r.path}`} href={r.path}>
-                <Text
-                  textColor="white"
-                  p="1"
-                  textDecorationLine={
-                    pathname === r.path ? "underline" : "none"
-                  }
-                >
-                  {r.name}
-                </Text>
-              </Link>
-            );
-          })}
-        </Flex>
+      </Flex>
+      <Flex
+        display={{ base: "flex", md: "none" }}
+        align="center"
+        ml="auto"
+        pr="2"
+      >
+        <Button
+          w="40px"
+          ref={btnRef}
+          colorScheme="transparent"
+          onClick={onOpen}
+          p={2}
+          border="2px"
+          ml="3"
+        >
+          <RxHamburgerMenu color="black" size={30} />
+        </Button>
       </Flex>
 
       <Drawer
@@ -135,22 +105,20 @@ const MainNavbar: FC = () => {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent bg="appGray.400">
+        <DrawerContent bg="white">
           <DrawerHeader
             borderBottom={2}
-            borderBottomColor="appGray.100"
+            borderBottomColor="gray.200"
             borderBottomStyle="solid"
           >
             <Flex position="relative">
-              <DrawerCloseButton top="0" right="-2" />
+              <DrawerCloseButton top="0" right="-2" color="black" />
             </Flex>
-            <Text color="white" fontWeight="bold">
-              ARTI PARTY
-            </Text>
+            <Text color="black">Your Medicine Online</Text>
           </DrawerHeader>
 
           <DrawerBody>
-            {gameRoutes.map((r) => {
+            {routes.map((r) => {
               return (
                 <Link
                   key={`${r.name}_${r.path}`}
@@ -158,7 +126,8 @@ const MainNavbar: FC = () => {
                   onClick={onClose}
                 >
                   <Text
-                    textColor="white"
+                    textColor={pathname === r.path ? "primary._" : "black"}
+                    _hover={{ color: "secondary._" }}
                     p="1"
                     textDecorationLine={
                       pathname === r.path ? "underline" : "none"
@@ -170,34 +139,6 @@ const MainNavbar: FC = () => {
               );
             })}
           </DrawerBody>
-
-          <DrawerFooter
-            borderTop={2}
-            borderTopColor="appGray.100"
-            borderTopStyle="solid"
-          >
-            <Flex justify="space-evenly" w="100%">
-              {secondaryRoutes.map((r) => {
-                return (
-                  <Link
-                    key={`${r.name}_${r.path}`}
-                    href={r.path}
-                    onClick={onClose}
-                  >
-                    <Text
-                      textColor="white"
-                      p="1"
-                      textDecorationLine={
-                        pathname === r.path ? "underline" : "none"
-                      }
-                    >
-                      {r.name}
-                    </Text>
-                  </Link>
-                );
-              })}
-            </Flex>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </Flex>
