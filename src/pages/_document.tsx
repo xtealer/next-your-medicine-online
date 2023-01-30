@@ -33,7 +33,7 @@ class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="Helping people find medications that are unavailable or out of stock."
+            content="Helping people find medications out of stock for less."
           />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
@@ -75,16 +75,13 @@ class MyDocument extends Document {
 
           <meta
             name="twitter:card"
-            content="Helping people find medications that are unavailable or out of stock."
+            content="Helping people find medications that are unavailable for less."
           />
           <meta name="twitter:url" content="https://yourmedicine.online/" />
-          <meta
-            name="twitter:title"
-            content="Helping people find medications that are unavailable or out of stock."
-          />
+          <meta name="twitter:title" content="Your Medicine Online" />
           <meta
             name="twitter:description"
-            content="Helping people find medications that are unavailable or out of stock."
+            content="Helping people find medications that are unavailable for less."
           />
           <meta
             name="twitter:image"
@@ -94,25 +91,25 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="Helping people find medications that are unavailable or out of stock."
+            content="Helping people find medications that are unavailable for less."
           />
           <meta
             property="og:description"
-            content="Helping people find medications that are unavailable or out of stock."
+            content="Helping people find medications that are unavailable for less."
           />
           <meta
             property="og:site_name"
-            content="Helping people find medications that are unavailable or out of stock."
+            content="Helping people find medications that are unavailable for less."
           />
           <meta property="og:url" content="https://yourmedicine.online/" />
           <meta
             property="og:image"
-            content="https://yourmedicine.online/og-image.jpeg"
+            content="https://yourmedicine.online/og-image.jpg"
           />
-          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:type" content="image/jpg" />
           <meta
             property="og:image:url"
-            content="https://yourmedicine.online/og-image.jpeg"
+            content="https://yourmedicine.online/og-image.jpg"
           />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
