@@ -73,10 +73,7 @@ class MyDocument extends Document {
             href="https://yourmedicine.online/favicon.ico"
           />
 
-          <meta
-            name="twitter:card"
-            content="Helping people find medications out of stock for less."
-          />
+          <meta property="twitter:card" content="summary_large_image" />
           <meta name="twitter:url" content="https://yourmedicine.online/" />
           <meta name="twitter:title" content="Your Medicine Online" />
           <meta
@@ -95,7 +92,7 @@ class MyDocument extends Document {
             content="Helping people find medications out of stock for less."
           />
           <meta property="og:site_name" content="Your Medicine Online" />
-          <meta property="og:url" content="https://yourmedicine.online/" />
+          <meta property="og:url" content="https://www.yourmedicine.online/" />
           <meta
             property="og:image"
             content="https://yourmedicine.online/og-image.jpg"
