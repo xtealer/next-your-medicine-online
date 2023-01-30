@@ -33,7 +33,15 @@ const MainNavbar: FC = () => {
   const btnRef = useRef<any>();
 
   return (
-    <Flex p={4} bg="appGray.400" minH="72px" flex="0">
+    <Flex
+      px={2}
+      bg="white"
+      borderBottom={2}
+      borderBottomStyle="solid"
+      borderBottomColor="gray.200"
+      minH="100px"
+      flex="0"
+    >
       <Button
         w="40px"
         ref={btnRef}
@@ -53,15 +61,20 @@ const MainNavbar: FC = () => {
         mr={{ base: "auto", md: "0" }}
         userSelect="none"
       >
-        <Flex position="relative" h="100%" width={{ base: "36px", md: "53px" }}>
-          <Image
-            src="/apple-touch-icon.png"
-            height={40}
-            width={53}
-            alt="Arti Party"
-            style={{ objectFit: "contain", flex: 1 }}
-            draggable={false}
-          />
+        <Flex h="100%" w="auto">
+          <Link href="/">
+            <Image
+              style={{
+                height: "100%",
+                width: "min-content",
+              }}
+              src="/images/logo-full.png"
+              height={126.25}
+              width={329.25}
+              alt="Logo of Your Medicine Online"
+              draggable={false}
+            />
+          </Link>
         </Flex>
         <Text
           textColor="white"

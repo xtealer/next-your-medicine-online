@@ -7,9 +7,8 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Buy Ozempic</title>
+        <title>Buy Ozempic Now</title>
       </Head>
-      Test
     </>
   );
 };
