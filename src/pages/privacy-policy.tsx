@@ -114,8 +114,8 @@ const PrivacyPolicy: NextPageWithLayout = () => {
           If you have any questions or concerns about our Privacy Policy, please
           contact us.
           <br />
-          We appreciate your business and are committed to protecting your
-          privacy.
+          We appreciate your confidentiality and are committed to protecting
+          your privacy.
         </Text>
       </Flex>
     </>
