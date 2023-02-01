@@ -7,4 +7,15 @@ const nextConfig = withPWA({
   register: true,
 });
 
-module.exports = nextConfig({ reactStrictMode: true, swcMinify: true });
+const rewriteConfig = nextConfig({ reactStrictMode: true, swcMinify: true });
+module.exports = {
+  ...rewriteConfig,
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/api/sitemap",
+      },
+    ];
+  },
+};
