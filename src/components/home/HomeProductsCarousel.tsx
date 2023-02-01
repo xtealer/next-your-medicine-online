@@ -13,6 +13,7 @@ import {
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
+import { toggleSupport } from "@/helpers/tawkHelpers";
 
 const slideDelay = 1000 * 10;
 
@@ -175,19 +176,20 @@ const HomeProductsCarousel: FC = () => {
                 Feel free to contact us
               </Text>
               <Flex mt="6" justify="center">
-                <Link href="/#contact-us" style={{ flex: 1, maxWidth: 250 }}>
-                  <Button
-                    color="white"
-                    bg="primary._"
-                    w="full"
-                    fontWeight="bold"
-                    fontSize={{ base: "lg", md: "xl", xl: "2xl" }}
-                    px="4"
-                    py={{ base: "6", md: "8" }}
-                  >
-                    Contact now
-                  </Button>
-                </Link>
+                <Button
+                  onClick={toggleSupport}
+                  color="white"
+                  bg="primary._"
+                  w="full"
+                  flex={1}
+                  maxWidth={250}
+                  fontWeight="bold"
+                  fontSize={{ base: "lg", md: "xl", xl: "2xl" }}
+                  px="4"
+                  py={{ base: "6", md: "8" }}
+                >
+                  Contact now
+                </Button>
               </Flex>
             </GridItem>
 
