@@ -1,3 +1,4 @@
+import useDidHydrate from "@/hooks/useDidHydrate";
 import { ImageItem } from "@/types/ImageItem";
 import { Grid, GridItem, Image } from "@chakra-ui/react";
 import { FC, useCallback, useState } from "react";

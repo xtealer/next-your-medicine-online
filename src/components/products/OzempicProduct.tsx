@@ -1,3 +1,4 @@
+import useDidHydrate from "@/hooks/useDidHydrate";
 import { ImageItem } from "@/types/ImageItem";
 import {
   Breadcrumb,
@@ -11,6 +12,7 @@ import {
 import Link from "next/link";
 import { FC } from "react";
 import FacebookButton from "../buttons/FacebookButton";
+import PayPalButton from "../buttons/PaypalButton";
 import TwitterButton from "../buttons/TwitterButton";
 import WhatsappButton from "../buttons/WhatsappButton";
 import ImagesPreview from "../images/ImagesPreview";
@@ -34,38 +36,41 @@ const images = [
 ] as ImageItem[];
 
 const OzempicProduct: FC = () => {
+  const { didHydrate } = useDidHydrate();
   return (
     <Flex flexDirection="column" p="12" color="gray.800">
-      <Breadcrumb>
-        <BreadcrumbItem>
-          <Link href="/#store">
-            <BreadcrumbLink href="/#store" tabIndex={-1}>
-              Home
-            </BreadcrumbLink>
-          </Link>
-        </BreadcrumbItem>
+      {didHydrate && (
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link href="/#store">
+              <BreadcrumbLink href="/#store" tabIndex={-1}>
+                Home
+              </BreadcrumbLink>
+            </Link>
+          </BreadcrumbItem>
 
-        <BreadcrumbItem>
-          <Link href="/products/ozempic">
-            <BreadcrumbLink href="/products/ozempic" tabIndex={-1}>
-              Products
-            </BreadcrumbLink>
-          </Link>
-        </BreadcrumbItem>
+          <BreadcrumbItem>
+            <Link href="/products/ozempic">
+              <BreadcrumbLink href="/products/ozempic" tabIndex={-1}>
+                Products
+              </BreadcrumbLink>
+            </Link>
+          </BreadcrumbItem>
 
-        <BreadcrumbItem isCurrentPage>
-          <Link href="/products/ozempic">
-            <BreadcrumbLink
-              href="/products/ozempic"
-              color="primary._"
-              tabIndex={-1}
-              as={Link}
-            >
-              Ozempic
-            </BreadcrumbLink>
-          </Link>
-        </BreadcrumbItem>
-      </Breadcrumb>
+          <BreadcrumbItem isCurrentPage>
+            <Link href="/products/ozempic">
+              <BreadcrumbLink
+                href="/products/ozempic"
+                color="primary._"
+                tabIndex={-1}
+                as={Link}
+              >
+                Ozempic
+              </BreadcrumbLink>
+            </Link>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      )}
 
       <Flex
         flexDirection={{ base: "column-reverse", md: "row" }}
@@ -118,19 +123,7 @@ const OzempicProduct: FC = () => {
             Price: $700
           </Text>
 
-          <a
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=W2E6R3L2J82P4"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <input
-              type="image"
-              src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-large.png"
-              style={{ border: 0 }}
-              name="submit"
-              alt="PayPal - The safer, easier way to pay online!"
-            />
-          </a>
+          <PayPalButton />
 
           <Flex pt="6" gap="3">
             <WhatsappButton link="https://api.whatsapp.com/send?text=https://yourmedicine.online/products/ozempic" />
