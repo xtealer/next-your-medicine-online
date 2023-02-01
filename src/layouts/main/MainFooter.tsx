@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { toggleSupport } from "@/helpers/tawkHelpers";
 
 const subFooterLinks = [
   { alt: "Visa Logo", url: "https://usa.visa.com/", image: "/images/visa.png" },
@@ -36,15 +37,9 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 const MainFooter: FC = () => {
   return (
     <Flex bg="white" minH="min" flexDirection="column">
-      {/* <Flex bg="gray.800" justify="center" p="4">
-        <Text color="white">
-          by YourMedicineOnline @ {new Date().getFullYear()}
-        </Text>
-      </Flex> */}
       <Box bg="gray.800">
         <Container as={Stack} maxW={"6xl"} py={10}>
           <SimpleGrid
-            // templateColumns={{ base: "1fr", md: "2fr 1fr 1fr 1fr 1fr" }}
             templateColumns={{ base: "1fr", md: "2fr 1fr 1fr 1fr" }}
             spacing={8}
             gridColumnEnd="1"
@@ -87,30 +82,25 @@ const MainFooter: FC = () => {
               <Link href={"/products/ozempic"}>
                 <Text textColor="white">Buy Ozempic</Text>
               </Link>
-              <ChakraLink textColor="white" href={"/#contact-us"}>
+              <ChakraLink textColor="white" onClick={toggleSupport}>
                 Tutorials
               </ChakraLink>
               <Link href={"/products/ozempic"}>
                 <Text textColor="white">Pricing</Text>
               </Link>
-              <Link href={"/products/ozempic"}>
-                <Text textColor="white">Releases</Text>
+              <Link href={"/blog"}>
+                <Text textColor="white">Blog</Text>
               </Link>
             </Stack>
-            {/* <Stack align={{ base: "center", md: "flex-start" }}>
-              <ListHeader>Company</ListHeader>
-              <ChakraLink textColor="white" href={"#"}>About</ChakraLink>
-              <ChakraLink textColor="white" href={"#"}>Press</ChakraLink>
-              <ChakraLink textColor="white" href={"#"}>Careers</ChakraLink>
-              <ChakraLink textColor="white" href={"#"}>Contact</ChakraLink>
-              <ChakraLink textColor="white" href={"#"}>Partners</ChakraLink>
-            </Stack> */}
             <Stack align={{ base: "center", md: "flex-start" }}>
-              <ListHeader>Support</ListHeader>
-              <ChakraLink textColor="white" href={"/#contact-us"}>
-                Help Center
+              <ListHeader>Company</ListHeader>
+              <ChakraLink textColor="white" href={"/#about-us"}>
+                About us
               </ChakraLink>
-              <ChakraLink textColor="white" href={"/#contact-us"}>
+              <ChakraLink textColor="white" href={"/#faq"}>
+                FAQ
+              </ChakraLink>
+              <ChakraLink textColor="white" onClick={toggleSupport}>
                 Contact us
               </ChakraLink>
               <ChakraLink
@@ -119,13 +109,6 @@ const MainFooter: FC = () => {
                 isExternal
               >
                 Terms of Service
-              </ChakraLink>
-              <ChakraLink
-                textColor="white"
-                href={"/terms-of-service"}
-                isExternal
-              >
-                Legal
               </ChakraLink>
               <ChakraLink textColor="white" href={"/privacy-policy"} isExternal>
                 Privacy Policy

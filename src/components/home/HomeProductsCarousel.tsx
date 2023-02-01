@@ -198,7 +198,7 @@ const HomeProductsCarousel: FC = () => {
               justifyContent="center"
               alignItems="center"
             >
-              <Flex flex="1" h={{ base: 150, sm: 200, md: 300, lg: 350 }}>
+              <Flex flex="1" h={{ base: 200, sm: 250, md: 400, lg: 500 }}>
                 <Image
                   style={{
                     objectFit: "contain",
@@ -206,8 +206,8 @@ const HomeProductsCarousel: FC = () => {
                     height: "100%",
                   }}
                   src="/images/contact-us.png"
-                  height={624}
-                  width={784}
+                  height={2432}
+                  width={3634}
                   alt="Contact Us Image"
                   draggable={false}
                 />

@@ -1,4 +1,4 @@
-import { FC, useMemo, useRef } from "react";
+import { FC, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
   Button,
@@ -15,13 +15,15 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import useDidHydrate from "@/hooks/useDidHydrate";
+import { toggleSupport } from "@/helpers/tawkHelpers";
+import { NOOP } from "@/helpers/callbackHelpers";
 
 const routes = [
   { name: "Store", path: "/#store" },
   { name: "Buy Ozempic", path: "/products/ozempic" },
   { name: "About Us", path: "/#about-us" },
   { name: "FAQ", path: "/#faq" },
-  { name: "Contact", path: "/#contact-us" },
+  { name: "Contact", onClick: toggleSupport },
 ];
 
 const MainNavbar: FC = () => {
@@ -47,7 +49,7 @@ const MainNavbar: FC = () => {
       h="100px"
       flex="0"
     >
-      <Flex h="100%" w="auto">
+      <Flex h="100%" flexShrink="1" maxW="260px">
         <Link href="/#store">
           <Image
             style={{
@@ -68,18 +70,35 @@ const MainNavbar: FC = () => {
         justify="center"
         gap={8}
         display={{ base: "none", md: "flex" }}
-        flex="1"
+        flexGrow="1"
       >
         {routes.map((r) => {
+          const content = (
+            <Text
+              userSelect="none"
+              textColor={pathname === r.path ? "primary._" : "black"}
+              _hover={{ textDecoration: "underline", color: "primary._" }}
+              p="1"
+            >
+              {r.name}
+            </Text>
+          );
+
+          if (!r.path) {
+            return (
+              <Flex
+                key={`${r.name}_${r.path}`}
+                onClick={r.onClick ?? NOOP}
+                cursor="pointer"
+              >
+                {content}
+              </Flex>
+            );
+          }
+
           return (
             <Link key={`${r.name}_${r.path}`} href={r.path}>
-              <Text
-                textColor={pathname === r.path ? "primary._" : "black"}
-                _hover={{ textDecoration: "underline", color: "primary._" }}
-                p="1"
-              >
-                {r.name}
-              </Text>
+              {content}
             </Link>
           );
         })}
@@ -128,19 +147,32 @@ const MainNavbar: FC = () => {
 
           <DrawerBody>
             {routes.map((r) => {
-              return (
-                <Link
-                  key={`${r.name}_${r.path}`}
-                  href={r.path}
-                  onClick={onClose}
+              const content = (
+                <Text
+                  userSelect="none"
+                  textColor={pathname === r.path ? "primary._" : "black"}
+                  _hover={{ textDecoration: "underline", color: "primary._" }}
+                  p="1"
                 >
-                  <Text
-                    textColor={pathname === r.path ? "primary._" : "black"}
-                    _hover={{ textDecoration: "underline", color: "primary._" }}
-                    p="1"
+                  {r.name}
+                </Text>
+              );
+
+              if (!r.path) {
+                return (
+                  <Flex
+                    key={`${r.name}_${r.path}`}
+                    onClick={r.onClick ?? NOOP}
+                    cursor="pointer"
                   >
-                    {r.name}
-                  </Text>
+                    {content}
+                  </Flex>
+                );
+              }
+
+              return (
+                <Link key={`${r.name}_${r.path}`} href={r.path}>
+                  {content}
                 </Link>
               );
             })}
