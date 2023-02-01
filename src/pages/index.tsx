@@ -13,7 +13,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Buy Ozempic Now</title>
+        <title>YourMedicineOnline</title>
         <meta name="keywords" content="Ozempic,Ozempic Online,Ozempic Paypal" />
       </Head>
       <HomeProductsCarousel />

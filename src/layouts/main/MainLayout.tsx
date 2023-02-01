@@ -3,6 +3,7 @@ import { FC, ReactNode } from "react";
 
 import MainNavbar from "./MainNavbar";
 import MainFooter from "./MainFooter";
+import TawkLiveChat from "@/components/generic/TawkLiveChat";
 
 export interface MainLayoutProps {
   children?: ReactNode | ReactNode[];
@@ -27,6 +28,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
         </Flex>
         <MainFooter />
       </Flex>
+      <TawkLiveChat />
     </Flex>
   );
 };
