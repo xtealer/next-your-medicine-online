@@ -1,4 +1,4 @@
-import { Flex, Portal } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 
 import MainNavbar from "./MainNavbar";
@@ -10,15 +10,22 @@ export interface MainLayoutProps {
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
-    <Flex flexDirection="column" bg="white" h="full">
+    <>
       <MainNavbar />
-      <Flex flex="1" flexDirection="column" overflowY="scroll">
-        <Flex flex="1" flexDirection="column" minH="calc(100vh - 100px)">
+      <Flex
+        as="main"
+        h="full"
+        w="full"
+        pt="100px"
+        flexDirection="column"
+        bg="white"
+      >
+        <Flex flex="1" flexDirection="column">
           {children}
         </Flex>
         <MainFooter />
       </Flex>
-    </Flex>
+    </>
   );
 };
 

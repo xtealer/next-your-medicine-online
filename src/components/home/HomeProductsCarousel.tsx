@@ -39,14 +39,14 @@ const HomeProductsCarousel: FC = () => {
 
   return (
     <Box position="relative">
-      <Button position="absolute" h="full" zIndex="50" onClick={onLeft}>
+      <Button position="absolute" h="full" zIndex="1" onClick={onLeft}>
         <BsChevronLeft color="white" />
       </Button>
       <Button
         position="absolute"
         right="0"
         h="full"
-        zIndex="50"
+        zIndex="1"
         onClick={onRight}
       >
         <BsChevronRight color="white" />

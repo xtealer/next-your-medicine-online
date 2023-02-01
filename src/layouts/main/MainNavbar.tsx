@@ -31,12 +31,16 @@ const MainNavbar: FC = () => {
   return (
     <Flex
       px={2}
+      as="header"
+      position="fixed"
+      w="full"
       bg="white"
       borderBottom={2}
       borderBottomStyle="solid"
       borderBottomColor="gray.200"
-      minH="100px"
+      h="100px"
       flex="0"
+      zIndex="100"
     >
       <Flex h="100%" w="auto">
         <Link href="/">
@@ -66,9 +70,8 @@ const MainNavbar: FC = () => {
             <Link key={`${r.name}_${r.path}`} href={r.path}>
               <Text
                 textColor={pathname === r.path ? "primary._" : "black"}
-                _hover={{ color: "secondary._" }}
+                _hover={{ textDecoration: "underline", color: "primary._" }}
                 p="1"
-                textDecorationLine={pathname === r.path ? "underline" : "none"}
               >
                 {r.name}
               </Text>
@@ -126,11 +129,8 @@ const MainNavbar: FC = () => {
                 >
                   <Text
                     textColor={pathname === r.path ? "primary._" : "black"}
-                    _hover={{ color: "secondary._" }}
+                    _hover={{ textDecoration: "underline", color: "primary._" }}
                     p="1"
-                    textDecorationLine={
-                      pathname === r.path ? "underline" : "none"
-                    }
                   >
                     {r.name}
                   </Text>

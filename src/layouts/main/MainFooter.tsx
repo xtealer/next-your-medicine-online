@@ -35,14 +35,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 const MainFooter: FC = () => {
   return (
-    <Flex
-      bg="white"
-      minH="min"
-      borderTop={2}
-      borderTopStyle="solid"
-      borderTopColor="gray.200"
-      flexDirection="column"
-    >
+    <Flex bg="white" minH="min" flexDirection="column">
       {/* <Flex bg="gray.800" justify="center" p="4">
         <Text color="white">
           by YourMedicineOnline @ {new Date().getFullYear()}
