@@ -7,6 +7,7 @@ import HomeAdvantageCards from "@/components/home/HomeAdvantageCards";
 import Script from "next/script";
 import HomeAboutUsComponent from "@/components/home/HomeAboutUsComponent";
 import HomeFAQComponent from "@/components/home/HomeFAQComponent";
+import BackTopRow from "@/generic/BackTopRow";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPageWithLayout = () => {
       <HomeAdvantageCards />
       <HomeAboutUsComponent />
       <HomeFAQComponent />
+      <BackTopRow />
       {/**
        // * Scripts
       */}

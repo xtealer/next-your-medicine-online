@@ -14,13 +14,13 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import useDidHydrate from "@/hooks/useDidHydrate";
 
 const routes = [
   { name: "Store", path: "/#store" },
   { name: "Buy Ozempic", path: "/products/ozempic" },
   { name: "About Us", path: "/#about-us" },
+  { name: "FAQ", path: "/#faq" },
   { name: "Contact", path: "/#contact-us" },
 ];
 

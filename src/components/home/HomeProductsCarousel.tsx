@@ -134,6 +134,7 @@ const HomeProductsCarousel: FC = () => {
                 width={900}
                 alt="Ozempic Medication Picture"
                 draggable={false}
+                priority
               />
             </Flex>
           </Flex>

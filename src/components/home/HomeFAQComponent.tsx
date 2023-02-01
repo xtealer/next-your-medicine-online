@@ -8,13 +8,13 @@ import {
   Flex,
   Heading,
   Image,
-  Text,
 } from "@chakra-ui/react";
 import { FC } from "react";
 
 const HomeFAQComponent: FC = () => {
   return (
     <Flex
+      id="faq"
       p="12"
       bgImage="/images/medic-pills-bg.jpg"
       bgSize="cover"

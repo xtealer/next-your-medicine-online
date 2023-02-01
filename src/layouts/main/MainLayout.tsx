@@ -13,6 +13,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
     <Flex direction="column" h="full" w="full">
       <MainNavbar />
       <Flex
+        id="main-container"
         as="main"
         flex="1"
         w="full"
