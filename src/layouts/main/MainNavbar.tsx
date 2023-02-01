@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { FC, useMemo, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
   Button,
@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import useDidHydrate from "@/hooks/useDidHydrate";
 
 const routes = [
   { name: "Store", path: "/#store" },
@@ -25,8 +26,14 @@ const routes = [
 
 const MainNavbar: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { pathname } = useRouter();
+  const { didHydrate } = useDidHydrate();
   const btnRef = useRef<any>();
+
+  if (!didHydrate) {
+    return null;
+  }
+
+  const pathname = `${window.parent.location.pathname}${window.parent.location.hash}`;
 
   return (
     <Flex

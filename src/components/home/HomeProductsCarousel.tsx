@@ -83,14 +83,14 @@ const HomeProductsCarousel: FC = () => {
                   variant="h2"
                   color="white"
                   fontWeight="bold"
-                  fontSize={{ base: "2xl", md: "5xl", xl: "6xl" }}
+                  fontSize={{ base: "2xl", md: "6xl", xl: "7xl" }}
                   userSelect="none"
                 >
                   Ozempic
                 </Heading>
                 <Text
                   color="white"
-                  fontSize={{ base: "2xl", md: "5xl" }}
+                  fontSize={{ base: "xl", md: "5xl" }}
                   pt="0"
                   fontStyle="italic"
                   userSelect="none"
@@ -109,7 +109,7 @@ const HomeProductsCarousel: FC = () => {
                     fontWeight="bold"
                     fontSize={{ base: "lg", md: "xl", xl: "2xl" }}
                     px="4"
-                    py={{ base: "4", md: "6" }}
+                    py={{ base: "6", md: "8" }}
                   >
                     Buy now
                   </Button>
@@ -157,15 +157,15 @@ const HomeProductsCarousel: FC = () => {
                 variant="h2"
                 color="white"
                 fontWeight="bold"
-                fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
+                fontSize={{ base: "2xl", md: "5xl", xl: "6xl" }}
                 textAlign="center"
                 userSelect="none"
               >
-                Do you need another medicament?
+                Need another medicament?
               </Heading>
               <Text
                 color="white"
-                fontSize={{ base: "2xl", md: "5xl" }}
+                fontSize={{ base: "xl", md: "4xl" }}
                 pt="0"
                 fontStyle="italic"
                 textAlign="center"
@@ -182,9 +182,9 @@ const HomeProductsCarousel: FC = () => {
                     fontWeight="bold"
                     fontSize={{ base: "lg", md: "xl", xl: "2xl" }}
                     px="4"
-                    py={{ base: "4", md: "6" }}
+                    py={{ base: "6", md: "8" }}
                   >
-                    Contact us
+                    Contact now
                   </Button>
                 </Link>
               </Flex>

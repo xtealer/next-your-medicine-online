@@ -32,6 +32,9 @@ const HomeFAQComponent: FC = () => {
         px="10"
         py="12"
         userSelect="none"
+        maxW={{ base: "100%", lg: "700px" }}
+        w="full"
+        mx="auto"
       >
         <Accordion allowToggle color="white">
           <AccordionItem>

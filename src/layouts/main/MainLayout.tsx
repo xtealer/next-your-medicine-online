@@ -19,6 +19,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
         flexDirection="column"
         bg="white"
         overflowY="scroll"
+        scrollBehavior="smooth"
       >
         <Flex flex="1" flexDirection="column">
           {children}
