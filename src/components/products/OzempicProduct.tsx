@@ -67,7 +67,11 @@ const OzempicProduct: FC = () => {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Flex flexDirection="row" justifyContent="center" pt="12">
+      <Flex
+        flexDirection={{ base: "column-reverse", md: "row" }}
+        justifyContent="center"
+        pt="12"
+      >
         <Flex flexDirection="column" flex="1" maxW="600px" px="6">
           <ImagesPreview images={images} />
           <Text fontWeight="semibold" pt="6">
@@ -98,7 +102,14 @@ const OzempicProduct: FC = () => {
             Please consult your general doctor for better information.
           </Text>
         </Flex>
-        <Flex flexDirection="column" flex="1" px="6" maxW="600px">
+        <Flex
+          flexDirection="column"
+          flex="1"
+          px="6"
+          pb="12"
+          maxW="600px"
+          alignItems={{ base: "center", md: "unset" }}
+        >
           <Heading as="h1" fontWeight="bold" textAlign="left">
             Ozempic
           </Heading>

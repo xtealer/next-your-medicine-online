@@ -19,6 +19,7 @@ const ImagesPreview: FC<IProps> = ({ images }) => {
       justifyContent="center"
       minH="350px"
       w="450px"
+      maxW="full"
       gap="2"
     >
       <GridItem
