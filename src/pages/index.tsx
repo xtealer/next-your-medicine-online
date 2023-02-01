@@ -5,6 +5,7 @@ import MainLayout from "@/layouts/main/MainLayout";
 import HomeProductsCarousel from "@/components/home/HomeProductsCarousel";
 import HomeAdvantageCards from "@/components/home/HomeAdvantageCards";
 import Script from "next/script";
+import HomeAboutUsComponent from "@/components/home/HomeAboutUsComponent";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <HomeProductsCarousel />
       <HomeAdvantageCards />
+      <HomeAboutUsComponent />
       {/**
        // * Scripts
       */}

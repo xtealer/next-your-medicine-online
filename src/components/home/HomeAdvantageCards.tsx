@@ -58,7 +58,7 @@ const HomeAdvantageCards: FC = () => {
             >
               {c.title}
             </Heading>
-            <Text color="gray.700" mt="3" fontSize="sm" textAlign="left">
+            <Text color="gray.600" mt="3" fontSize="sm" textAlign="left">
               {c.description}
             </Text>
           </CardBody>
