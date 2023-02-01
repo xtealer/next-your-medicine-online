@@ -132,9 +132,9 @@ const OzempicProduct: FC = () => {
           </Flex>
 
           <Text fontWeight="semibold" pt="6">
-            Shipping to the United States is charged $100.00.
-            <br /> Remember to copy the transfer number that appears above in
-            the PayPal and then send to{" "}
+            Shipping to the United States has an extra cost of $100.00 (DHL, or
+            other couriers available).
+            <br /> Remember to send copy of PayPal confirmation invoice email to{" "}
             <ChakraLink
               color="primary._"
               textDecoration="underline"
@@ -143,8 +143,8 @@ const OzempicProduct: FC = () => {
             >
               yourmedicineonlinee@gmail.com
             </ChakraLink>{" "}
-            next to the Paypal confirmation order number and address for
-            shipping to the United States.
+            with Shipping Address and Full Name as shown in Driver&apos;s
+            License or Passport Document for Shipping to the United States.
           </Text>
         </Flex>
       </Flex>
