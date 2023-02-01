@@ -38,7 +38,7 @@ const HomeProductsCarousel: FC = () => {
   }, [emblaApi]);
 
   return (
-    <Box position="relative">
+    <Box id="store" position="relative">
       <Button
         position="absolute"
         h="full"

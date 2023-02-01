@@ -27,7 +27,7 @@ const subFooterLinks = [
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2} textColor="white">
+    <Text fontWeight={"bold"} fontSize={"xl"} mb={2} textColor="white">
       {children}
     </Text>
   );
@@ -50,10 +50,15 @@ const MainFooter: FC = () => {
             gridColumnEnd="1"
             px="4"
           >
-            <Stack spacing={6} justify="center" alignItems="center">
+            <Stack
+              spacing={6}
+              justify="center"
+              alignItems="center"
+              gridRow={{ base: 4, md: "unset" }}
+            >
               <Box>
                 <Flex h="100%" w="auto">
-                  <Link href="/">
+                  <Link href="/#store">
                     <Image
                       style={{
                         height: "80px",
@@ -76,7 +81,7 @@ const MainFooter: FC = () => {
             </Stack>
             <Stack align={{ base: "center", md: "flex-start" }}>
               <ListHeader>Products</ListHeader>
-              <Link href={"/"}>
+              <Link href={"/#store"}>
                 <Text textColor="white">Store</Text>
               </Link>
               <Link href={"/products/ozempic"}>

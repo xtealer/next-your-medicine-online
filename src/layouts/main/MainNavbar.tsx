@@ -17,7 +17,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const routes = [
-  { name: "Store", path: "/" },
+  { name: "Store", path: "/#store" },
   { name: "Buy Ozempic", path: "/products/ozempic" },
   { name: "About Us", path: "/#about-us" },
   { name: "Contact", path: "/#contact-us" },
@@ -32,7 +32,6 @@ const MainNavbar: FC = () => {
     <Flex
       px={2}
       as="header"
-      position="fixed"
       w="full"
       bg="white"
       borderBottom={2}
@@ -40,10 +39,9 @@ const MainNavbar: FC = () => {
       borderBottomColor="gray.200"
       h="100px"
       flex="0"
-      zIndex="100"
     >
       <Flex h="100%" w="auto">
-        <Link href="/">
+        <Link href="/#store">
           <Image
             style={{
               height: "100%",
@@ -116,7 +114,9 @@ const MainNavbar: FC = () => {
             <Flex position="relative">
               <DrawerCloseButton top="0" right="-2" color="black" />
             </Flex>
-            <Text color="black">Your Medicine Online</Text>
+            <Text color="black" fontWeight="normal">
+              Menu
+            </Text>
           </DrawerHeader>
 
           <DrawerBody>

@@ -20,19 +20,20 @@ const HomeFAQComponent: FC = () => {
       bgSize="cover"
       bgRepeat="no-repeat"
       flexDirection="column"
+      minH="700px"
     >
       <Heading as="h2" color="primary.700" fontWeight="bold" textAlign="center">
-        About us
+        {"FAQ's"}
       </Heading>
       <Flex
         mt="12"
         flexDirection="column"
         bg="primary.400"
-        p="10"
+        px="10"
+        py="12"
         userSelect="none"
-        flex="1"
       >
-        <Accordion allowToggle>
+        <Accordion allowToggle color="white">
           <AccordionItem>
             <AccordionButton py="4">
               <Box as="span" flex="1" textAlign="left">

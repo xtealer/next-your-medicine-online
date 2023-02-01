@@ -4,7 +4,9 @@ import { FC } from "react";
 const HomeAboutUsComponent: FC = () => {
   return (
     <Flex
-      p="12"
+      id="about-us"
+      py="12"
+      px={{ base: "12", md: "20" }}
       bgImage="/images/pills-bg.jpg"
       bgSize="cover"
       bgRepeat="no-repeat"

@@ -10,22 +10,22 @@ export interface MainLayoutProps {
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
-    <>
+    <Flex direction="column" h="full" w="full">
       <MainNavbar />
       <Flex
         as="main"
-        h="full"
+        flex="1"
         w="full"
-        pt="100px"
         flexDirection="column"
         bg="white"
+        overflowY="scroll"
       >
         <Flex flex="1" flexDirection="column">
           {children}
         </Flex>
         <MainFooter />
       </Flex>
-    </>
+    </Flex>
   );
 };
 
