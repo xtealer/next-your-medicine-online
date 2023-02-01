@@ -83,7 +83,8 @@ const HomeProductsCarousel: FC = () => {
                   variant="h2"
                   color="white"
                   fontWeight="bold"
-                  fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
+                  fontSize={{ base: "2xl", md: "5xl", xl: "6xl" }}
+                  userSelect="none"
                 >
                   Ozempic
                 </Heading>
@@ -92,6 +93,7 @@ const HomeProductsCarousel: FC = () => {
                   fontSize={{ base: "2xl", md: "5xl" }}
                   pt="0"
                   fontStyle="italic"
+                  userSelect="none"
                 >
                   Injection
                 </Text>
@@ -107,7 +109,7 @@ const HomeProductsCarousel: FC = () => {
                     fontWeight="bold"
                     fontSize={{ base: "lg", md: "xl", xl: "2xl" }}
                     px="4"
-                    py={{ base: "4", md: "8" }}
+                    py={{ base: "4", md: "6" }}
                   >
                     Buy now
                   </Button>
@@ -157,6 +159,7 @@ const HomeProductsCarousel: FC = () => {
                 fontWeight="bold"
                 fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
                 textAlign="center"
+                userSelect="none"
               >
                 Do you need another medicament?
               </Heading>
@@ -166,6 +169,7 @@ const HomeProductsCarousel: FC = () => {
                 pt="0"
                 fontStyle="italic"
                 textAlign="center"
+                userSelect="none"
               >
                 Feel free to contact us
               </Text>
@@ -178,7 +182,7 @@ const HomeProductsCarousel: FC = () => {
                     fontWeight="bold"
                     fontSize={{ base: "lg", md: "xl", xl: "2xl" }}
                     px="4"
-                    py={{ base: "4", md: "8" }}
+                    py={{ base: "4", md: "6" }}
                   >
                     Contact us
                   </Button>
