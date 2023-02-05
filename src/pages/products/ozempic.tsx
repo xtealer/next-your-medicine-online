@@ -1,16 +1,20 @@
 import Head from "next/head";
 
-import { NextPageWithLayout } from "@/types/Layout";
 import MainLayout from "@/layouts/main/MainLayout";
 import BackTopRow from "@/generic/BackTopRow";
+
 import OzempicProduct from "@/components/products/OzempicProduct";
+import { NextPageWithLayout } from "@/types/Layout";
 
 const OzempicProductPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Buy Ozempic Now</title>
-        <meta name="keywords" content="Ozempic,Ozempic Online,Ozempic Paypal" />
+        <title>Buy Ozempic 2mg Pen Now | Your Medicine Online</title>
+        <meta
+          name="keywords"
+          content="Get Ozempic, Get Ozempic Pen, Buy Ozempic, Get Ozempic Now, Buy Ozempic Now, Ozempic,Ozempic Online,Ozempic Paypal,Ozempic USA,Your Medicine Online Ozempic,Your Medicine Online Ozempic Pen"
+        />
       </Head>
       <OzempicProduct />
       <BackTopRow />

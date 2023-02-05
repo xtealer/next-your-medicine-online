@@ -19,7 +19,7 @@ import { toggleSupport } from "@/helpers/tawkHelpers";
 import { NOOP } from "@/helpers/callbackHelpers";
 
 const routes = [
-  { name: "Store", path: "/#store" },
+  { name: "Home", path: "/#home" },
   { name: "Buy Ozempic", path: "/products/ozempic" },
   { name: "About Us", path: "/#about-us" },
   { name: "FAQ", path: "/#faq" },
@@ -50,7 +50,7 @@ const MainNavbar: FC = () => {
       flex="0"
     >
       <Flex h="100%" flexShrink="1" maxW="260px">
-        <Link href="/#store">
+        <Link href="/#home">
           <Image
             style={{
               height: "100%",

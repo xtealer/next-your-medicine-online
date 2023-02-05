@@ -10,7 +10,7 @@ const SuccessPage: NextPageWithLayout = () => {
     if (!router.isReady) {
       return;
     }
-    router.replace("/#store");
+    router.replace("/#home");
   }, [router, router.isReady]);
 
   return null;

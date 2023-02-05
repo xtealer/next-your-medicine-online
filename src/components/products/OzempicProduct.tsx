@@ -42,8 +42,8 @@ const OzempicProduct: FC = () => {
       {didHydrate && (
         <Breadcrumb>
           <BreadcrumbItem>
-            <Link href="/#store">
-              <BreadcrumbLink href="/#store" tabIndex={-1}>
+            <Link href="/#home">
+              <BreadcrumbLink href="/#home" tabIndex={-1}>
                 Home
               </BreadcrumbLink>
             </Link>
@@ -120,7 +120,7 @@ const OzempicProduct: FC = () => {
           </Heading>
 
           <Text fontWeight="semibold" pt="6" pb="3">
-            Price: $700
+            Price: $600
           </Text>
 
           <PayPalButton />
@@ -132,11 +132,10 @@ const OzempicProduct: FC = () => {
           </Flex>
 
           <Text fontWeight="semibold" pt="6">
-            Shipping to the United States has an extra cost of $100.00 by DHL.
-            **
+            Shipping to the United States cost is $150.00 (all couriers) **
             <br />
             <br />
-            Remember to send a copy of PayPal invoice confirmation email to{" "}
+            Remember to send copy of your PayPal Invoice confirmation to{" "}
             <ChakraLink
               color="primary._"
               textDecoration="underline"
@@ -145,9 +144,8 @@ const OzempicProduct: FC = () => {
             >
               yourmedicineonlinee@gmail.com
             </ChakraLink>{" "}
-            with Shipping Address, Full Name and picture of Driver&apos;s
-            License, Passport Document or any other kind of valid Personal ID to
-            complete order confirmation.
+            make sure to include Full Legal Name and Destination Shipping
+            Address to complete order confirmation.
           </Text>
         </Flex>
       </Flex>

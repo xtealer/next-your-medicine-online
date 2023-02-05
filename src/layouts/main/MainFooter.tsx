@@ -52,8 +52,8 @@ const MainFooter: FC = () => {
               gridRow={{ base: 4, md: "unset" }}
             >
               <Box>
-                <Flex h="100%" w="auto">
-                  <Link href="/#store">
+                <Flex h="100%" w="auto" userSelect="none">
+                  <Link href="/#home">
                     <Image
                       style={{
                         height: "80px",
@@ -69,15 +69,20 @@ const MainFooter: FC = () => {
                   </Link>
                 </Flex>
               </Box>
-              <Text fontSize={"sm"} color="white" textColor="white">
-                © YourMedicineOnline {new Date().getFullYear()} All rights
+              <Text
+                fontSize={"sm"}
+                color="white"
+                textColor="white"
+                userSelect="none"
+              >
+                © Your Medicine Online {new Date().getFullYear()} All rights
                 reserved
               </Text>
             </Stack>
             <Stack align={{ base: "center", md: "flex-start" }}>
               <ListHeader>Products</ListHeader>
-              <Link href={"/#store"}>
-                <Text textColor="white">Store</Text>
+              <Link href={"/#home"}>
+                <Text textColor="white">Home</Text>
               </Link>
               <Link href={"/products/ozempic"}>
                 <Text textColor="white">Buy Ozempic</Text>
