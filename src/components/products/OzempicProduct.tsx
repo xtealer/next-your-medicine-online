@@ -116,7 +116,7 @@ const OzempicProduct: FC = () => {
           alignItems={{ base: "center", md: "unset" }}
         >
           <Heading as="h1" fontWeight="bold" textAlign="left">
-            Ozempic
+            Ozempic Pen 2mg / 1,5ml
           </Heading>
 
           <Text fontWeight="semibold" pt="6" pb="3">
