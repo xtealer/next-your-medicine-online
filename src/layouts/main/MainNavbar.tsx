@@ -26,6 +26,9 @@ const routes = [
   { name: "Contact", onClick: toggleSupport },
 ];
 
+const planeIconWidth = 21.96 * 0.8;
+const planeIconHeight = 21.92 * 0.8;
+
 const MainNavbar: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { didHydrate } = useDidHydrate();
@@ -42,17 +45,17 @@ const MainNavbar: FC = () => {
       <Flex
         backgroundColor="#F53950"
         px={4}
-        py={4}
+        py={2}
         justifyContent="center"
         gap={3}
         userSelect="none"
       >
-        <Text fontWeight="bold" textAlign="center">
+        <Text fontWeight="bold" textAlign="center" color="white" fontSize="sm">
           Fast Shipping to the United States, Monday through Friday
         </Text>
         <Image
-          height={21.96}
-          width={22.92}
+          width={planeIconWidth}
+          height={planeIconHeight}
           src="/images/simple-line-icons_plane.png"
           alt="Fast Shipping Image"
           style={{ objectFit: "contain" }}
@@ -66,7 +69,7 @@ const MainNavbar: FC = () => {
         borderBottom={2}
         borderBottomStyle="solid"
         borderBottomColor="gray.200"
-        h="100px"
+        h="80px"
       >
         <Flex h="100%" flexShrink="1" maxW="260px">
           <Link href="/#home">

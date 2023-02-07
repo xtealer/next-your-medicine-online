@@ -17,13 +17,13 @@ const PayPalButton: FC = () => {
         name="submit"
         alt="PayPal - The safer, easier way to pay online!"
       />
-      <img
+      {/* <img
         alt="Paypal Button"
         style={{ border: 0 }}
         src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif"
         width="1"
         height="1"
-      />
+      /> */}
     </form>
   );
 };

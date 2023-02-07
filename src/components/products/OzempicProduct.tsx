@@ -37,6 +37,7 @@ const images = [
 
 const OzempicProduct: FC = () => {
   const { didHydrate } = useDidHydrate();
+
   return (
     <Flex flexDirection="column" p="12" color="gray.800">
       {didHydrate && (
