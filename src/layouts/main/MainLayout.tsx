@@ -16,7 +16,9 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 
   useEffect(() => {
     router.events.on("routeChangeComplete", () => {
-      scrollToTop("main-container");
+      if (!window.location.hash) {
+        scrollToTop("main-container");
+      }
       console.log("route change routeChangeComplete");
     });
 

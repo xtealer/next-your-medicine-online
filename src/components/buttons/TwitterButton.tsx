@@ -8,8 +8,8 @@ interface IProps {
 
 const TwitterButton: FC<IProps> = ({ link }) => {
   return (
-    <Link color="#1DA1F2" href={link} isExternal>
-      <RiTwitterFill fontSize="1.5rem" />
+    <Link color="#1DA1F2" href={link} isExternal fontSize="3xl">
+      <RiTwitterFill />
     </Link>
   );
 };

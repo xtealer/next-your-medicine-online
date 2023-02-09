@@ -39,7 +39,11 @@ const OzempicProduct: FC = () => {
   const { didHydrate } = useDidHydrate();
 
   return (
-    <Flex flexDirection="column" p="12" color="gray.800">
+    <Flex
+      flexDirection="column"
+      p={{ base: "8", sm: "10", md: "12" }}
+      color="gray.800"
+    >
       {didHydrate && (
         <Breadcrumb>
           <BreadcrumbItem>
@@ -78,7 +82,12 @@ const OzempicProduct: FC = () => {
         justifyContent="center"
         pt="12"
       >
-        <Flex flexDirection="column" flex="1" maxW="600px" px="6">
+        <Flex
+          flexDirection="column"
+          flex="1"
+          maxW="600px"
+          px={{ base: "0", md: "6" }}
+        >
           <ImagesPreview images={images} />
           <Text fontWeight="semibold" pt="6">
             Ozempic® (semaglutide) injection 0.5 mg, 1 mg, or 2 mg is an
@@ -109,14 +118,18 @@ const OzempicProduct: FC = () => {
           </Text>
         </Flex>
         <Flex
+          px={{ base: "0", md: "6" }}
           flexDirection="column"
           flex="1"
-          px="6"
           pb="12"
           maxW="600px"
           alignItems={{ base: "center", md: "unset" }}
         >
-          <Heading as="h1" fontWeight="bold" textAlign="left">
+          <Heading
+            as="h1"
+            fontWeight="bold"
+            textAlign={{ base: "center", md: "left" }}
+          >
             Ozempic Pen 2mg / 1,5ml
           </Heading>
 
@@ -132,7 +145,7 @@ const OzempicProduct: FC = () => {
             <TwitterButton link="https://twitter.com/intent/tweet?url=https://www.yourmedicine.online/products/ozempic&text=Ozempic" />
           </Flex>
 
-          <Text fontWeight="semibold" pt="6">
+          <Text fontWeight="semibold" pt="6" w="full">
             Shipping to the United States cost is $150.00 (all couriers) **
             <br />
             <br />

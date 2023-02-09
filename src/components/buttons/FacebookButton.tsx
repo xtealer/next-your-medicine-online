@@ -8,8 +8,8 @@ interface IProps {
 
 const FacebookButton: FC<IProps> = ({ link }) => {
   return (
-    <Link color="#4267B2" href={link} isExternal>
-      <RiFacebookCircleFill fontSize="1.5rem" />
+    <Link color="#4267B2" href={link} isExternal fontSize="3xl">
+      <RiFacebookCircleFill />
     </Link>
   );
 };

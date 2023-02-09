@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { toggleSupport } from "@/helpers/tawkHelpers";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const subFooterLinks = [
   { alt: "Visa Logo", url: "https://usa.visa.com/", image: "/images/visa.png" },
@@ -120,41 +121,42 @@ const MainFooter: FC = () => {
               </ChakraLink>
             </Stack>
             <Stack align={{ base: "center", md: "flex-start" }}>
-              <ListHeader>Follow Us</ListHeader>
+              <ListHeader>Contact us</ListHeader>
+
+              <Flex gap="4" pt="2">
+                <ChakraLink
+                  textColor="white"
+                  href={
+                    "https://www.facebook.com/people/Your-Medicine-Online/100089977901490/"
+                  }
+                  isExternal
+                  fontSize="3xl"
+                >
+                  <FaFacebook />
+                </ChakraLink>
+                <ChakraLink
+                  textColor="white"
+                  href={"https://twitter.com/uMedicineOnline"}
+                  isExternal
+                  fontSize="3xl"
+                >
+                  <FaTwitter />
+                </ChakraLink>
+                <ChakraLink
+                  textColor="white"
+                  href={"https://www.instagram.com/yourmedicineonline/"}
+                  isExternal
+                  fontSize="3xl"
+                >
+                  <FaInstagram />
+                </ChakraLink>
+              </Flex>
               <ChakraLink
                 textColor="white"
-                href={"https://facebook.com/"}
-                isExternal
+                href={"mailto:yourmedicineonlinee@gmail.com"}
+                fontSize="md"
               >
-                Facebook
-              </ChakraLink>
-              <ChakraLink
-                textColor="white"
-                href={"https://twitter.com/"}
-                isExternal
-              >
-                Twitter
-              </ChakraLink>
-              <ChakraLink
-                textColor="white"
-                href={"https://dribbble.com/"}
-                isExternal
-              >
-                Dribbble
-              </ChakraLink>
-              <ChakraLink
-                textColor="white"
-                href={"https://instagram.com/"}
-                isExternal
-              >
-                Instagram
-              </ChakraLink>
-              <ChakraLink
-                textColor="white"
-                href={"https://linkedin.com/"}
-                isExternal
-              >
-                LinkedIn
+                yourmedicineonlinee@gmail.com
               </ChakraLink>
             </Stack>
           </SimpleGrid>

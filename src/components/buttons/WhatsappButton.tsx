@@ -8,8 +8,8 @@ interface IProps {
 
 const WhatsappButton: FC<IProps> = ({ link }) => {
   return (
-    <Link color="#25D366" href={link} isExternal>
-      <RiWhatsappLine fontSize="1.5rem" />
+    <Link color="#25D366" href={link} isExternal fontSize="3xl">
+      <RiWhatsappLine />
     </Link>
   );
 };
