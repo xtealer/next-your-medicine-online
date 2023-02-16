@@ -14,12 +14,7 @@ const ComingSoonComponent: FC = () => {
         p="10"
         userSelect="none"
       >
-        <Heading
-          color="white"
-          fontWeight="bold"
-          textAlign="center"
-          fontSize={{ base: "2xl", md: "initial" }}
-        >
+        <Heading color="white" fontWeight="bold" textAlign="center">
           <Text fontSize={{ base: "4xl", md: "6xl" }} lineHeight="initial">
             👨🏻‍💻🚧🛠️
           </Text>
