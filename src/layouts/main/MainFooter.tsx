@@ -1,8 +1,15 @@
 import { FC, ReactNode } from "react";
 import Link from "next/link";
 
-import { Flex, Image, Link as ChakraLink, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Image,
+  Link as ChakraLink,
+  Text,
+} from "@chakra-ui/react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { toggleSupport } from "@/helpers/tawkHelpers";
 
 const subFooterLinks = [
   {
@@ -101,8 +108,8 @@ const MainFooter: FC = () => {
             <Link href={"/products/ozempic"}>
               <Text textColor="white">Buy Ozempic</Text>
             </Link>
-            <Link href={"/products/ozempic"}>
-              <Text textColor="white">Tutorials</Text>
+            <Link href={"/faq"}>
+              <Text textColor="white">FAQ</Text>
             </Link>
             <Link href={"/blog"}>
               <Text textColor="white">Blog</Text>
@@ -110,15 +117,14 @@ const MainFooter: FC = () => {
           </Flex>
         </Flex>
         <Flex minW="130px" flexDirection="column">
-          <ListHeader>Company</ListHeader>
+          <ListHeader>Information</ListHeader>
           <Flex flexDirection="column" gap="2">
             <Link href={"/#about-us"}>
               <Text textColor="white">About us</Text>
             </Link>
-            <Link href={"/faq"}>
-              <Text textColor="white">FAQ</Text>
-            </Link>
-
+            <Button onClick={toggleSupport}>
+              <Text textColor="white">Contact</Text>
+            </Button>
             <Link href={"/terms-of-service"}>
               <Text textColor="white">Terms of Service</Text>
             </Link>

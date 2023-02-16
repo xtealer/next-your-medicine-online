@@ -19,7 +19,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Home | Your Medicine Online</title>
+        <title>Store | Your Medicine Online</title>
       </Head>
       <HomeProductsCarousel />
       <HomeAdvantageCards />
