@@ -1,28 +1,5 @@
 //pages/sitemap.xml.js
 
-/*
-<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!--We manually set the two URLs we know already-->
-     <url>
-       <loc>https://www.yourmedicine.online/#store</loc>
-     </url>
-     <url>
-       <loc>https://www.yourmedicine.online/products/ozempic</loc>
-     </url>
-     /*
-		 ${data
-				.map(({ id }) => {
-					return `
-       <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${id}`}</loc>
-       </url>
-     `;
-				})
-				.join('')}
-   </urlset>
-*/
-
 function generateSiteMap(data: any[]) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

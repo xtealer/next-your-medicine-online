@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import Script from "next/script";
 import Head from "next/head";
 
 import { NextPageWithLayout } from "@/types/Layout";
@@ -19,7 +18,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Store | Your Medicine Online</title>
+        <title>Shop | Your Medicine Online</title>
       </Head>
       <HomeProductsCarousel />
       <HomeAdvantageCards />

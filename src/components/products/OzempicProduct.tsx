@@ -47,9 +47,9 @@ const OzempicProduct: FC = () => {
       {didHydrate && (
         <Breadcrumb>
           <BreadcrumbItem>
-            <Link href="/#store">
-              <BreadcrumbLink href="/#store" tabIndex={-1}>
-                Home
+            <Link href="/#shop">
+              <BreadcrumbLink href="/#shop" tabIndex={-1}>
+                Shop
               </BreadcrumbLink>
             </Link>
           </BreadcrumbItem>

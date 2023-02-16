@@ -68,7 +68,7 @@ const MainFooter: FC = () => {
           alignItems="center"
         >
           <Flex w="auto" userSelect="none">
-            <Link href="/#store">
+            <Link href="/#shop">
               <Image
                 style={{
                   height: "80px",
@@ -96,7 +96,7 @@ const MainFooter: FC = () => {
         <Flex minW="130px" flexDirection="column">
           <ListHeader>Products</ListHeader>
           <Flex flexDirection="column" gap="2">
-            <Link href={"/#store"}>
+            <Link href={"/#shop"}>
               <Text textColor="white">Store</Text>
             </Link>
             <Link href={"/products/ozempic"}>
