@@ -11,7 +11,7 @@ const ComingSoonComponent: FC = () => {
         flexDirection="column"
         justify="center"
         bg="#2d478b"
-        p="10"
+        p={{ base: "5", md: "10" }}
         userSelect="none"
       >
         <Heading color="white" fontWeight="bold" textAlign="center">
