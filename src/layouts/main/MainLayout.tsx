@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { FC, ReactNode, useEffect } from "react";
 
 import MainNavbar from "./MainNavbar";
@@ -29,25 +29,29 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
     };
   }, [router.events]);
 
+  const mainContainerClassname = useBreakpointValue({
+    base: "scrollbar-hidden",
+    md: "",
+  });
+
   return (
     <Flex direction="column" h="full" w="full">
       <MainNavbar />
-      <Flex
+      <Box
         id="main-container"
         as="main"
         flex="1"
         w="full"
-        flexDirection="column"
         bg="white"
-        overflowY="scroll"
+        overflow="scroll"
         scrollBehavior="smooth"
-        className="scrollbar-hidden"
+        className={mainContainerClassname}
       >
-        <Flex flex="1" flexDirection="column">
+        <Flex minH="full" flexDirection="column">
           {children}
         </Flex>
         <MainFooter />
-      </Flex>
+      </Box>
       <TawkLiveChat />
     </Flex>
   );

@@ -69,6 +69,7 @@ const OzempicProduct: FC = () => {
                 color="primary._"
                 tabIndex={-1}
                 as={Link}
+                fontWeight="bold"
               >
                 Ozempic
               </BreadcrumbLink>
@@ -133,7 +134,7 @@ const OzempicProduct: FC = () => {
             Ozempic Pen 2mg / 1,5ml
           </Heading>
 
-          <Text fontWeight="semibold" pt="6" pb="3">
+          <Text fontWeight="semibold" pt="2" pb="3" fontSize="2xl">
             Price: $600
           </Text>
 
@@ -149,7 +150,7 @@ const OzempicProduct: FC = () => {
             Shipping to the United States cost is $150.00 (all couriers) **
             <br />
             <br />
-            Remember to send copy of your PayPal Invoice confirmation to{" "}
+            Remember to send us a copy of your PayPal Receipt to{" "}
             <ChakraLink
               color="primary._"
               textDecoration="underline"
@@ -158,8 +159,7 @@ const OzempicProduct: FC = () => {
             >
               yourmedicineonlinee@gmail.com
             </ChakraLink>{" "}
-            make sure to include Full Legal Name and Destination Shipping
-            Address to complete order confirmation.
+            for order confirmation.
           </Text>
         </Flex>
       </Flex>

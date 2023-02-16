@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import MainLayout from "@/layouts/main/MainLayout";
-import BackTopRow from "@/generic/BackTopRow";
+import BackTopRow from "@/components/generic/BackTopRow";
 
 import OzempicProduct from "@/components/products/OzempicProduct";
 import { NextPageWithLayout } from "@/types/Layout";
