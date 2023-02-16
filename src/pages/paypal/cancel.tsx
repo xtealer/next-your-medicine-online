@@ -10,7 +10,7 @@ const CancelPage: NextPageWithLayout = () => {
     if (!router.isReady) {
       return;
     }
-    router.replace("/#home");
+    router.replace("/#store");
   }, [router, router.isReady]);
 
   return null;

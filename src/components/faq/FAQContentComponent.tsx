@@ -149,10 +149,9 @@ const data = [
   },
 ];
 
-const HomeFAQComponent: FC = () => {
+const FAQContentComponent: FC = () => {
   return (
     <Flex
-      id="faq"
       px={{ base: "0", md: "12" }}
       py="12"
       bgImage="/images/medic-pills-bg.jpg"
@@ -244,4 +243,4 @@ const HomeFAQComponent: FC = () => {
   );
 };
 
-export default HomeFAQComponent;
+export default FAQContentComponent;

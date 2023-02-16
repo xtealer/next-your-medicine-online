@@ -6,7 +6,7 @@ const HomeAboutUsComponent: FC = () => {
     <Flex
       id="about-us"
       py="12"
-      px={{ base: "12", md: "20" }}
+      px={{ base: "0", md: "20" }}
       bgImage="/images/pills-bg.jpg"
       bgSize="cover"
       bgRepeat="no-repeat"

@@ -41,6 +41,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
         bg="white"
         overflowY="scroll"
         scrollBehavior="smooth"
+        className="scrollbar-hidden"
       >
         <Flex flex="1" flexDirection="column">
           {children}

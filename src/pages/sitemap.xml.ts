@@ -5,7 +5,7 @@
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <!--We manually set the two URLs we know already-->
      <url>
-       <loc>https://www.yourmedicine.online/#home</loc>
+       <loc>https://www.yourmedicine.online/#store</loc>
      </url>
      <url>
        <loc>https://www.yourmedicine.online/products/ozempic</loc>
@@ -28,13 +28,13 @@ function generateSiteMap(data: any[]) {
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <!--We manually set the two URLs we know already-->
      <url>
-       <loc>https://www.yourmedicine.online/#home</loc>
+       <loc>https://www.yourmedicine.online/</loc>
      </url>
      <url>
-       <loc>https://www.yourmedicine.online/#about-us</loc>
+       <loc>https://www.yourmedicine.online/faq</loc>
      </url>
      <url>
-       <loc>https://www.yourmedicine.online/#faq</loc>
+       <loc>https://www.yourmedicine.online/blog</loc>
      </url>
      <url>
        <loc>https://www.yourmedicine.online/products/ozempic</loc>
