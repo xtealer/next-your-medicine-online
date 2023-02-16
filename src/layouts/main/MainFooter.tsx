@@ -1,13 +1,7 @@
 import { FC, ReactNode } from "react";
 import Link from "next/link";
 
-import {
-  Button,
-  Flex,
-  Image,
-  Link as ChakraLink,
-  Text,
-} from "@chakra-ui/react";
+import { Flex, Image, Link as ChakraLink, Text } from "@chakra-ui/react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { toggleSupport } from "@/helpers/tawkHelpers";
 
@@ -122,9 +116,9 @@ const MainFooter: FC = () => {
             <Link href={"/#about-us"}>
               <Text textColor="white">About us</Text>
             </Link>
-            <Button onClick={toggleSupport}>
-              <Text textColor="white">Contact</Text>
-            </Button>
+            <ChakraLink textColor="white" onClick={toggleSupport}>
+              Contact us
+            </ChakraLink>
             <Link href={"/terms-of-service"}>
               <Text textColor="white">Terms of Service</Text>
             </Link>
