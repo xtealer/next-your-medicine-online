@@ -100,7 +100,7 @@ const HomeProductsCarousel: FC = () => {
                 </Text>
               </Flex>
               <Box mt="6" w="full" textAlign="center">
-                <Link href="/products/ozempic">
+                <Link href="/products/ozempic-pen-2mg">
                   <Button
                     color="white"
                     bg="primary._"

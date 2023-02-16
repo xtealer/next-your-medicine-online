@@ -20,11 +20,10 @@ import { NOOP } from "@/helpers/callbackHelpers";
 
 const routes = [
   { name: "Shop", path: "/#shop" },
-  { name: "Get Ozempic Now", path: "/products/ozempic" },
-  { name: "About Us", path: "/#about-us" },
+  { name: "Get Ozempic Pen Now", path: "/products/ozempic-pen-2mg" },
   { name: "FAQ", path: "/faq" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", onClick: toggleSupport },
+  { name: "Quotes", onClick: toggleSupport },
 ];
 
 const planeIconWidth = 21.96 * 0.8;

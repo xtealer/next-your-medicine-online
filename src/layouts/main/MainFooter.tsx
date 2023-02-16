@@ -93,14 +93,14 @@ const MainFooter: FC = () => {
             reserved
           </Text>
         </Flex>
-        <Flex minW="130px" flexDirection="column">
+        <Flex minW="140px" flexDirection="column">
           <ListHeader>Products</ListHeader>
           <Flex flexDirection="column" gap="2">
             <Link href={"/#shop"}>
               <Text textColor="white">Store</Text>
             </Link>
-            <Link href={"/products/ozempic"}>
-              <Text textColor="white">Buy Ozempic</Text>
+            <Link href={"/products/ozempic-pen-2mg"}>
+              <Text textColor="white">Get Ozempic Pens</Text>
             </Link>
             <Link href={"/faq"}>
               <Text textColor="white">FAQ</Text>
@@ -110,7 +110,7 @@ const MainFooter: FC = () => {
             </Link>
           </Flex>
         </Flex>
-        <Flex minW="130px" flexDirection="column">
+        <Flex minW="140px" flexDirection="column">
           <ListHeader>Information</ListHeader>
           <Flex flexDirection="column" gap="2">
             <Link href={"/#about-us"}>
@@ -127,7 +127,7 @@ const MainFooter: FC = () => {
             </Link>
           </Flex>
         </Flex>
-        <Flex flexDirection="column" minW="130px">
+        <Flex flexDirection="column" minW="140px">
           <ListHeader>Contact us</ListHeader>
           <Flex flexDirection="column" gap="2">
             <Flex gap="4">

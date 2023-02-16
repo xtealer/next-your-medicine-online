@@ -14,7 +14,7 @@ function generateSiteMap(data: any[]) {
        <loc>https://www.yourmedicine.online/blog</loc>
      </url>
      <url>
-       <loc>https://www.yourmedicine.online/products/ozempic</loc>
+       <loc>https://www.yourmedicine.online/products/ozempic-pen-2mg</loc>
      </url>
      <url>
        <loc>https://www.yourmedicine.online/privacy-policy</loc>

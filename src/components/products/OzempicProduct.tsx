@@ -55,23 +55,23 @@ const OzempicProduct: FC = () => {
           </BreadcrumbItem>
 
           <BreadcrumbItem>
-            <Link href="/products/ozempic">
-              <BreadcrumbLink href="/products/ozempic" tabIndex={-1}>
+            <Link href="/products/ozempic-pen-2mg">
+              <BreadcrumbLink href="/products/ozempic-pen-2mg" tabIndex={-1}>
                 Products
               </BreadcrumbLink>
             </Link>
           </BreadcrumbItem>
 
           <BreadcrumbItem isCurrentPage>
-            <Link href="/products/ozempic">
+            <Link href="/products/ozempic-pen-2mg">
               <BreadcrumbLink
-                href="/products/ozempic"
+                href="/products/ozempic-pen-2mg"
                 color="primary._"
                 tabIndex={-1}
                 as={Link}
                 fontWeight="bold"
               >
-                Ozempic
+                Ozempic Pen 2mg 1.5ml
               </BreadcrumbLink>
             </Link>
           </BreadcrumbItem>
@@ -108,9 +108,9 @@ const OzempicProduct: FC = () => {
             <PayPalButton />
 
             <Flex pt="6" gap="3">
-              <WhatsappButton link="https://api.whatsapp.com/send?text=https://yourmedicine.online/products/ozempic" />
-              <FacebookButton link="https://www.facebook.com/sharer/sharer.php?u=https://www.yourmedicine.online/products/ozempic" />
-              <TwitterButton link="https://twitter.com/intent/tweet?url=https://www.yourmedicine.online/products/ozempic&text=Ozempic" />
+              <WhatsappButton link="https://api.whatsapp.com/send?text=https://yourmedicine.online/products/ozempic-pen-2mg" />
+              <FacebookButton link="https://www.facebook.com/sharer/sharer.php?u=https://www.yourmedicine.online/products/ozempic-pen-2mg" />
+              <TwitterButton link="https://twitter.com/intent/tweet?url=https://www.yourmedicine.online/products/ozempic-pen-2mg&text=Ozempic" />
             </Flex>
 
             <Text fontWeight="semibold" pt="6" w="full">
