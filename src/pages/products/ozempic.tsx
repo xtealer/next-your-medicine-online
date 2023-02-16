@@ -10,7 +10,7 @@ const OzempicProductPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Buy Ozempic Pen 2mg / 1,5ml Now | Your Medicine Online</title>
+        <title>Get Ozempic Pen 2mg / 1,5ml Now | Your Medicine Online</title>
         <meta
           name="keywords"
           content="Get Ozempic, Get Ozempic Pen, Buy Ozempic, Get Ozempic Now, Buy Ozempic Now, Ozempic,Ozempic Online,Ozempic Paypal,Ozempic USA,Your Medicine Online Ozempic,Your Medicine Online Ozempic Pen"
