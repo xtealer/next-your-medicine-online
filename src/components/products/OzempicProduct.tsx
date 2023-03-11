@@ -102,7 +102,7 @@ const OzempicProduct: FC = () => {
             </Heading>
 
             <Text fontWeight="semibold" pt="2" pb="3" fontSize="2xl">
-              Price: $600
+              Price: $500
             </Text>
 
             <PayPalButton />
