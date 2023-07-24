@@ -47,33 +47,30 @@ const OzempicProduct: FC = () => {
       {didHydrate && (
         <Breadcrumb>
           <BreadcrumbItem>
-            <Link href="/#shop">
-              <BreadcrumbLink href="/#shop" tabIndex={-1}>
-                Shop
-              </BreadcrumbLink>
-            </Link>
+            <BreadcrumbLink as={Link} href="/#shop" tabIndex={-1}>
+              Shop
+            </BreadcrumbLink>
           </BreadcrumbItem>
 
           <BreadcrumbItem>
-            <Link href="/products/ozempic-pen-2mg">
-              <BreadcrumbLink href="/products/ozempic-pen-2mg" tabIndex={-1}>
-                Products
-              </BreadcrumbLink>
-            </Link>
+            <BreadcrumbLink
+              as={Link}
+              href="/products/ozempic-pen-2mg"
+              tabIndex={-1}
+            >
+              Products
+            </BreadcrumbLink>
           </BreadcrumbItem>
 
           <BreadcrumbItem isCurrentPage>
-            <Link href="/products/ozempic-pen-2mg">
-              <BreadcrumbLink
-                href="/products/ozempic-pen-2mg"
-                color="primary._"
-                tabIndex={-1}
-                as={Link}
-                fontWeight="bold"
-              >
-                Ozempic Pen 2mg 1.5ml
-              </BreadcrumbLink>
-            </Link>
+            <BreadcrumbLink
+              href="/products/ozempic-pen-2mg"
+              color="primary._"
+              tabIndex={-1}
+              fontWeight="bold"
+            >
+              Ozempic Pen 2mg 1.5ml
+            </BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       )}

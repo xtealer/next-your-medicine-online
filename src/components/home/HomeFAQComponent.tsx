@@ -155,66 +155,79 @@ const HomeFAQComponent: FC = () => {
       id="faq"
       px={{ base: "0", md: "12" }}
       py="12"
-      bgImage="/images/medic-pills-bg.jpg"
-      bgSize="cover"
-      bgRepeat="no-repeat"
       flexDirection="column"
+      position="relative"
       // minH="1000px"
     >
-      <Heading as="h2" color="primary.700" fontWeight="bold" textAlign="center">
-        {"FAQ's"}
-      </Heading>
-      <Flex
-        mt="12"
-        flexDirection="column"
-        bg="primary.400"
-        px={{ base: "4", md: "10" }}
-        py={{ base: "4", md: "12" }}
-        userSelect="none"
-        maxW={{ base: "100%", lg: "700px" }}
-        w="full"
-        mx="auto"
-      >
-        <Accordion color="white">
-          {data.map((d, i) => {
-            return (
-              <AccordionItem key={i}>
-                <AccordionButton py="4">
-                  <Box as="span" flex="1" textAlign="left">
-                    <Heading as="h3" fontWeight="bold" fontSize="lg">
-                      {d.title}
-                    </Heading>
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-                <AccordionPanel>
-                  {d.description.map((d, s_i) => {
-                    const childKey = `${i}_${s_i}`;
+      <Box position="relative">
+        <Heading
+          as="h2"
+          color="primary.700"
+          fontWeight="bold"
+          textAlign="center"
+        >
+          {"FAQ's"}
+        </Heading>
+        <Box position="absolute" h="full" w="full" zIndex="0" userSelect="none">
+          <Image
+            src="/images/medic-pills-bg.jpg"
+            alt="FAQ Background Image"
+            draggable={false}
+          />
+        </Box>
+        <Flex
+          mt="12"
+          flexDirection="column"
+          bg="primary.400"
+          px={{ base: "4", md: "10" }}
+          py={{ base: "4", md: "12" }}
+          userSelect="none"
+          maxW={{ base: "100%", lg: "700px" }}
+          w="full"
+          mx="auto"
+          zIndex="1"
+          position="relative"
+        >
+          <Accordion color="white">
+            {data.map((d, i) => {
+              return (
+                <AccordionItem key={i}>
+                  <AccordionButton py="4">
+                    <Box as="span" flex="1" textAlign="left">
+                      <Heading as="h3" fontWeight="bold" fontSize="lg">
+                        {d.title}
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                  <AccordionPanel>
+                    {d.description.map((d, s_i) => {
+                      const childKey = `${i}_${s_i}`;
 
-                    if (d.type === DescriptionTypeEnum.TEXT) {
-                      return d.value;
-                    }
+                      if (d.type === DescriptionTypeEnum.TEXT) {
+                        return d.value;
+                      }
 
-                    if (d.type === DescriptionTypeEnum.TEXT_ITALIC) {
-                      return (
-                        <Text key={childKey} fontStyle="italic">
-                          {d.value}
-                        </Text>
-                      );
-                    }
+                      if (d.type === DescriptionTypeEnum.TEXT_ITALIC) {
+                        return (
+                          <Text key={childKey} fontStyle="italic">
+                            {d.value}
+                          </Text>
+                        );
+                      }
 
-                    if (d.type === DescriptionTypeEnum.LINE_BREAK) {
-                      return <br key={childKey} />;
-                    }
+                      if (d.type === DescriptionTypeEnum.LINE_BREAK) {
+                        return <br key={childKey} />;
+                      }
 
-                    return null;
-                  })}
-                </AccordionPanel>
-              </AccordionItem>
-            );
-          })}
+                      return null;
+                    })}
+                  </AccordionPanel>
+                </AccordionItem>
+              );
+            })}
 
-          {/* <AccordionItem>
+            {/* <AccordionItem>
             <AccordionButton py="4">
               <Box as="span" flex="1" textAlign="left">
                 <Heading as="h3" fontWeight="bold" fontSize="lg">
@@ -238,8 +251,16 @@ const HomeFAQComponent: FC = () => {
               />
             </AccordionPanel>
           </AccordionItem> */}
-        </Accordion>
-      </Flex>
+          </Accordion>
+        </Flex>
+        <Box position="absolute" top="0" left="0" zIndex="0" w="full">
+          <Image
+            src="/images/medic-pills-bg.jpg"
+            alt="FAQ Background Image"
+            draggable={false}
+          />
+        </Box>
+      </Box>
     </Flex>
   );
 };

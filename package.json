@@ -19,8 +19,6 @@
     "@types/react-dom": "18.0.10",
     "axios": "^1.2.6",
     "date-fns": "^2.29.3",
-    "embla-carousel-autoplay": "^7.0.9",
-    "embla-carousel-react": "^7.0.9",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "firebase": "^9.16.0",
