@@ -30,17 +30,26 @@ const slideData = [
 
 const HomeProductsCarousel: FC = () => {
   const [index, setIndex] = useState(0);
+  const [manualUpdate, setManualUpdate] = useState(new Date());
 
-  const onLeft = useCallback(() => {
+  const onLeft = useCallback((e?: any) => {
     setIndex((prevIndex) =>
       prevIndex === 0 ? slideData.length - 1 : prevIndex - 1
     );
+
+    if (!!e) {
+      setManualUpdate(new Date());
+    }
   }, []);
 
-  const onRight = useCallback(() => {
+  const onRight = useCallback((e?: any) => {
     setIndex((prevIndex) =>
       prevIndex === slideData.length - 1 ? 0 : prevIndex + 1
     );
+
+    if (!!e) {
+      setManualUpdate(new Date());
+    }
   }, []);
 
   useEffect(() => {
@@ -50,7 +59,7 @@ const HomeProductsCarousel: FC = () => {
     return () => {
       clearTimeout(intervalRef);
     };
-  }, [onRight]);
+  }, [onRight, manualUpdate]);
 
   return (
     <Box id="shop" position="relative">
@@ -176,9 +185,10 @@ const HomeProductsCarousel: FC = () => {
                     src={slide.imageSrc}
                     height={324}
                     width={900}
-                    alt="Slide Image"
+                    alt={slide.title}
                     draggable={false}
                     priority={idx === 0}
+                    loading={idx === 0 ? "eager" : "lazy"}
                   />
                 </Flex>
               </Flex>

@@ -5,7 +5,7 @@ import MainLayout from "@/layouts/main/MainLayout";
 
 import ComingSoonComponent from "@/components/generic/ComingSoonComponent";
 
-const Home: NextPageWithLayout = () => {
+const Blog: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -16,8 +16,8 @@ const Home: NextPageWithLayout = () => {
   );
 };
 
-Home.getLayout = (c) => {
+Blog.getLayout = (c) => {
   return <MainLayout>{c}</MainLayout>;
 };
 
-export default Home;
+export default Blog;
