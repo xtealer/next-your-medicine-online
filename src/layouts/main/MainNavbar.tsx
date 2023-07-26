@@ -29,6 +29,11 @@ const routes = [
 const planeIconWidth = 21.96 * 0.8;
 const planeIconHeight = 21.92 * 0.8;
 
+const LOGO_HEIGHT = 126.25 * 0.7;
+const LOGO_WIDTH = 329.25 * 0.7;
+
+const pathRegex = /^\/[^/?#]*/; // Regex to match the route path without query params or hash params
+
 const MainNavbar: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { didHydrate } = useDidHydrate();
@@ -77,10 +82,11 @@ const MainNavbar: FC = () => {
               style={{
                 height: "100%",
                 width: "min-content",
+                objectFit: "contain",
               }}
               src="/images/logo-full.png"
-              height={126.25}
-              width={329.25}
+              height={LOGO_HEIGHT}
+              width={LOGO_WIDTH}
               alt="Logo of Your Medicine Online"
               draggable={false}
             />
@@ -95,10 +101,15 @@ const MainNavbar: FC = () => {
           flexGrow="1"
         >
           {routes.map((r) => {
+            const pathMatch = pathname.match(pathRegex);
+            const routePathMatch = r.path?.match(pathRegex);
+            const pathIsActive =
+              pathMatch && routePathMatch && pathMatch[0] === routePathMatch[0];
+
             const content = (
               <Text
                 userSelect="none"
-                textColor={pathname === r.path ? "primary._" : "black"}
+                textColor={pathIsActive ? "primary._" : "black"}
                 _hover={{ textDecoration: "underline", color: "primary._" }}
                 p="1"
               >
@@ -169,10 +180,17 @@ const MainNavbar: FC = () => {
 
             <DrawerBody>
               {routes.map((r) => {
+                const pathMatch = pathname.match(pathRegex);
+                const routePathMatch = r.path?.match(pathRegex);
+                const pathIsActive =
+                  pathMatch &&
+                  routePathMatch &&
+                  pathMatch[0] === routePathMatch[0];
+
                 const content = (
                   <Text
                     userSelect="none"
-                    textColor={pathname === r.path ? "primary._" : "black"}
+                    textColor={pathIsActive ? "primary._" : "black"}
                     _hover={{ textDecoration: "underline", color: "primary._" }}
                     p="1"
                   >

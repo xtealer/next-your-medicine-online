@@ -183,8 +183,8 @@ const HomeProductsCarousel: FC = () => {
                       objectFit: "contain",
                     }}
                     src={slide.imageSrc}
-                    height={324}
-                    width={900}
+                    height={600}
+                    width={520}
                     alt={slide.title}
                     draggable={false}
                     priority={idx === 0}

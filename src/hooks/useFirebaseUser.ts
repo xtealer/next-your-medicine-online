@@ -1,8 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { onAuthStateChanged, User } from "firebase/auth";
+import { onAuthStateChanged, Unsubscribe, User } from "firebase/auth";
 import { useState, useEffect } from "react";
-
-import { firebaseAuth } from "@/lib/initFirebase";
 
 export default () => {
   const [firebaseUser, setFirebaseUser] = useState<undefined | null | User>(
@@ -10,11 +8,23 @@ export default () => {
   );
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(firebaseAuth, (u) => {
-      setFirebaseUser(u);
+    let stale = false;
+    let unsubscribe: Unsubscribe = () => {};
+
+    import("@/lib/initFirebase").then((m) => {
+      if (stale) {
+        return;
+      }
+
+      unsubscribe = onAuthStateChanged(m.firebaseAuth, (u) => {
+        setFirebaseUser(u);
+      });
     });
 
-    return unsubscribe;
+    return () => {
+      unsubscribe();
+      stale = true;
+    };
   }, []);
 
   return firebaseUser;
