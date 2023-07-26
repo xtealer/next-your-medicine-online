@@ -12,6 +12,7 @@ const pwaNextConfig = nextConfig({
   swcMinify: true,
   experimental: {
     mdxRs: true,
+    nextScriptWorkers: true,
   },
 });
 

@@ -1,9 +1,9 @@
 import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import { initializeApp, getApp, FirebaseOptions } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { firebaseConfig, recapchaSiteKey } from "env";
+import { firebaseConfig, recapchaSiteKey } from "@/lib/env";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -19,13 +19,13 @@ function createFirebaseApp(config: FirebaseOptions) {
 export const firebaseApp = createFirebaseApp(firebaseConfig);
 export const firebaseFirestore = getFirestore(firebaseApp);
 export const firebaseAuth = getAuth(firebaseApp);
-export const firebaseAnalytics = (() => {
-  if (typeof window === "undefined") {
-    return null;
-  }
+// export const firebaseAnalytics = (() => {
+//   if (typeof window === "undefined") {
+//     return null;
+//   }
 
-  return getAnalytics(firebaseApp);
-})();
+//   return getAnalytics(firebaseApp);
+// })();
 
 // Pass your reCAPTCHA v3 site key (public key) to activate(). Make sure this
 // key is the counterpart to the secret key you set in the Firebase console.

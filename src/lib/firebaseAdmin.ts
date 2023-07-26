@@ -1,4 +1,4 @@
-import { serviceAccount } from "env";
+import { serviceAccount } from "@/lib/env";
 import {
   appCheck,
   AppOptions,
