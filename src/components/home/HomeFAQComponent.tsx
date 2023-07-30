@@ -180,7 +180,7 @@ const HomeFAQComponent: FC = () => {
             w="full"
             mx="auto"
           >
-            <Accordion color="white">
+            <Accordion color="white" allowToggle>
               {data.map((d, i) => {
                 return (
                   <AccordionItem key={i}>
