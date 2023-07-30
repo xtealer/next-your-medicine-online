@@ -9,7 +9,8 @@ const AppProviders: FC<{
 }> = ({ children }) => {
   return (
     <ChakraProvider theme={theme}>
-      <AppServices>{children}</AppServices>
+      {children}
+      <AppServices />
     </ChakraProvider>
   );
 };

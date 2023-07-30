@@ -216,7 +216,6 @@ const MainFooter: FC = () => {
               height={sl.height}
               style={{ objectFit: "contain" }}
               draggable={false}
-              loading="lazy"
             />
           </ChakraLink>
         ))}

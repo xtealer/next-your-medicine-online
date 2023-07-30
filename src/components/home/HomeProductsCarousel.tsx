@@ -194,7 +194,7 @@ const HomeProductsCarousel: FC = () => {
                     height={slide.image.height}
                     alt={slide.title}
                     draggable={false}
-                    {...(idx === 0 ? { priority: true } : { loading: "lazy" })}
+                    {...(idx === 0 ? { priority: true } : {})}
                   />
                 </Flex>
               </Flex>

@@ -3,7 +3,6 @@ import { FC, ReactNode, useEffect } from "react";
 
 import MainNavbar from "./MainNavbar";
 import MainFooter from "./MainFooter";
-import TawkLiveChat from "@/components/generic/TawkLiveChat";
 import { useRouter } from "next/router";
 import { scrollToTop } from "@/helpers/scrollHelpers";
 
@@ -57,7 +56,6 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
         </Flex>
         <MainFooter />
       </Box>
-      <TawkLiveChat />
     </Flex>
   );
 };
