@@ -4,7 +4,7 @@ import { FC } from "react";
 
 const ComingSoonComponent: FC = () => {
   return (
-    <Flex flexDirection="column" px="8" py="8" flex="1">
+    <Flex flexDirection="column" px={{ base: "0", md: "8" }} py="8" flex="1">
       <Flex
         w="full"
         minH="full"
