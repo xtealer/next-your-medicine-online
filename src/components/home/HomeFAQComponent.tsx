@@ -252,12 +252,16 @@ const HomeFAQComponent: FC = () => {
           left="0"
           zIndex="0"
           w="full"
+          h="full"
           display={{ base: "none", lg: "initial" }}
         >
           <Image
             src="/images/medic-pills-bg.jpg"
             alt="FAQ Background Image"
             draggable={false}
+            objectFit="contain"
+            w="full"
+            h="full"
           />
         </Box>
       </Box>
