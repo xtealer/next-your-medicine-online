@@ -26,11 +26,11 @@ const routes = [
   { name: "Quotes", onClick: toggleSupport },
 ];
 
-const planeIconWidth = 21.96 * 0.8;
-const planeIconHeight = 21.92 * 0.8;
+const planeIconWidth = 19.96;
+const planeIconHeight = 19.92;
 
-const LOGO_HEIGHT = 126.25 * 0.7;
-const LOGO_WIDTH = 329.25 * 0.7;
+const LOGO_HEIGHT = 79;
+const LOGO_WIDTH = 204;
 
 const pathRegex = /^\/[^/?#]*/; // Regex to match the route path without query params or hash params
 
@@ -74,22 +74,28 @@ const MainNavbar: FC = () => {
         borderBottomColor="gray.200"
         h="80px"
       >
-        <Flex h="100%" flexShrink="1" maxW="260px">
-          <Link href="/#shop">
-            <Image
-              style={{
-                height: "100%",
-                width: "min-content",
-                objectFit: "contain",
-              }}
-              src="/images/logo-full.png"
-              height={LOGO_HEIGHT}
-              width={LOGO_WIDTH}
-              alt="Logo of Your Medicine Online"
-              draggable={false}
-              priority
-            />
-          </Link>
+        <Flex
+          h="full"
+          flexShrink="1"
+          maxW="260px"
+          as={Link}
+          href="/#shop"
+          alignItems="center"
+        >
+          <Image
+            src="/images/logo-full.png"
+            style={{
+              height: "auto",
+              width: "auto",
+              maxHeight: "100%",
+              objectFit: "contain",
+            }}
+            height={LOGO_HEIGHT}
+            width={LOGO_WIDTH}
+            alt="Logo of Your Medicine Online"
+            draggable={false}
+            priority
+          />
         </Flex>
         <Flex
           direction="row"

@@ -1,8 +1,9 @@
 import { FC, ReactNode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
 
 import { theme } from "@/theme/theme";
-import AppServices from "./AppServices";
+const AppServices = dynamic(() => import("./AppServices"));
 
 const AppProviders: FC<{
   children: ReactNode | ReactNode[];
