@@ -63,7 +63,7 @@ const HomeProductsCarousel: FC = () => {
   useEffect(() => {
     const intervalRef = setInterval(() => {
       onRight();
-    }, Timeout.NORMAL * 8);
+    }, Timeout.NORMAL * 10);
     return () => {
       clearTimeout(intervalRef);
     };
