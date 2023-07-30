@@ -14,14 +14,13 @@ const AppServices: FC<{ children: ReactNode | ReactNode[] }> = ({
     <>
       <Script
         id="gtm-script"
-        async
-        type="text/partytown"
+        strategy="worker"
         src={
           "https://www.googletagmanager.com/gtag/js?id=" +
           env.firebaseConfig.measurementId
         }
       />
-      <Script type="text/partytown" id="gtm-init">
+      <Script strategy="worker" id="gtm-init">
         {`
    window.dataLayer = window.dataLayer || [];
    window.gtag = function gtag(){window.dataLayer.push(arguments);}

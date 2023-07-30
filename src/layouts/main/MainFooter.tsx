@@ -97,6 +97,7 @@ const MainFooter: FC = () => {
                 width={329.25}
                 alt="Logo of Your Medicine Online"
                 draggable={false}
+                loading="lazy"
               />
             </Link>
           </Flex>
@@ -215,6 +216,7 @@ const MainFooter: FC = () => {
               height={sl.height}
               style={{ objectFit: "contain" }}
               draggable={false}
+              loading="lazy"
             />
           </ChakraLink>
         ))}

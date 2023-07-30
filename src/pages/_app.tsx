@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 
 import { AppPropsWithLayout } from "@/types/Layout";
 import AppProviders from "@/AppProviders";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 import Head from "next/head";
 
 import TawkScript from "@/components/scripts/TawkScript";
