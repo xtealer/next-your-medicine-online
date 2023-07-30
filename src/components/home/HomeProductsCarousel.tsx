@@ -12,14 +12,22 @@ const slideData = [
   {
     title: "Ozempic",
     subtitle: "Injection",
-    imageSrc: "/images/ozempic-nobg.png",
+    image: {
+      src: "/images/ozempic-nobg.png",
+      width: 900,
+      height: 324,
+    },
     link: "/products/ozempic-pen-2mg",
     buttonText: "Buy now",
   },
   {
     title: "Need another medicament?",
     subtitle: "Feel free to contact us",
-    imageSrc: "/images/contact-us.png",
+    image: {
+      src: "/images/contact-us.png",
+      width: 1216,
+      height: 1817,
+    },
     // TODO: Build Contact Page.
     link: "/contact",
     callback: toggleSupport,
@@ -145,14 +153,14 @@ const HomeProductsCarousel: FC = () => {
                       variant="h2"
                       color="white"
                       fontWeight="bold"
-                      fontSize={{ base: "2xl", md: "6xl", xl: "7xl" }}
+                      fontSize={{ base: "2xl", md: "5xl", xl: "6xl" }}
                       userSelect="none"
                     >
                       {slide.title}
                     </Heading>
                     <Text
                       color="white"
-                      fontSize={{ base: "xl", md: "5xl" }}
+                      fontSize={{ base: "xl", md: "4xl" }}
                       pt="0"
                       fontStyle="italic"
                       userSelect="none"
@@ -171,24 +179,24 @@ const HomeProductsCarousel: FC = () => {
 
                 <Flex
                   direction="row"
-                  maxW={{ base: "full", md: "600px" }}
+                  maxW={{ base: "auto", md: "600px" }}
                   maxH={{ base: "50%", md: "full" }}
-                  mx={{ base: "auto", md: "unset" }}
-                  w={{ base: "full", md: "unset" }}
+                  mx={{ base: "full", md: "unset" }}
+                  userSelect="none"
                 >
                   <Image
                     style={{
-                      width: "100%",
-                      height: "auto",
                       objectFit: "contain",
+                      width: "100%",
                     }}
-                    src={slide.imageSrc}
-                    height={600}
-                    width={520}
+                    src={slide.image.src}
+                    width={slide.image.width}
+                    height={slide.image.height}
                     alt={slide.title}
                     draggable={false}
                     priority={idx === 0}
-                    loading={idx === 0 ? "eager" : "lazy"}
+                    // * Adding Priority Seems to be enough.
+                    // loading={idx === 0 ? "eager" : "lazy"}
                   />
                 </Flex>
               </Flex>

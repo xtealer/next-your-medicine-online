@@ -1,36 +1,53 @@
 import { FC, ReactNode } from "react";
 import Link from "next/link";
 
-import { Flex, Image, Link as ChakraLink, Text } from "@chakra-ui/react";
+import { Flex, Link as ChakraLink, Text } from "@chakra-ui/react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { toggleSupport } from "@/helpers/tawkHelpers";
+import Image from "next/image";
 
 const subFooterLinks = [
   {
     alt: "Secure SSL Logo",
     url: "https://www.cloudflare.com/learning/ssl/how-does-ssl-work/",
     image: "/images/ssl-secure.png",
+    height: 36,
+    width: 108,
   },
   {
     alt: "Verified Logo",
     url: "https://firebase.google.com/products/app-check",
     image: "/images/app-verified.png",
+    height: 53,
+    width: 66,
   },
   {
     alt: "Google Recaptcha Logo",
     url: "https://www.google.com/recaptcha/about/",
     image: "/images/recaptcha.png",
+    height: 44,
+    width: 97,
   },
-  { alt: "Visa Logo", url: "https://usa.visa.com/", image: "/images/visa.png" },
+  {
+    alt: "Visa Logo",
+    url: "https://usa.visa.com/",
+    image: "/images/visa.png",
+    height: 38,
+    width: 60,
+  },
   {
     alt: "Mastercard Logo",
     url: "https://www.mastercard.us/en-us.html",
     image: "/images/mastercard.png",
+    height: 38,
+    width: 60,
   },
   {
     alt: "Paypal Logo",
     url: "https://www.paypal.com/us/home",
     image: "/images/paypal.png",
+    height: 38,
+    width: 60,
   },
 ];
 
@@ -176,7 +193,7 @@ const MainFooter: FC = () => {
         minH="50px"
         gap="6"
         justify="center"
-        alignItems="flex-end"
+        alignItems="center"
         borderTop={1}
         borderColor="gray.600"
         borderStyle="solid"
@@ -184,8 +201,21 @@ const MainFooter: FC = () => {
         px={{ base: "6", md: "10" }}
       >
         {subFooterLinks.map((sl) => (
-          <ChakraLink key={sl.image} href={sl.url} isExternal w="auto">
-            <Image src={sl.image} alt={sl.alt} draggable={false} />
+          <ChakraLink
+            key={sl.image}
+            href={sl.url}
+            isExternal
+            w="auto"
+            userSelect="none"
+          >
+            <Image
+              src={sl.image}
+              alt={sl.alt}
+              width={sl.width}
+              height={sl.height}
+              style={{ objectFit: "contain" }}
+              draggable={false}
+            />
           </ChakraLink>
         ))}
       </Flex>

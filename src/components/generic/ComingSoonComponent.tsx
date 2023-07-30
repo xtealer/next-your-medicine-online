@@ -1,4 +1,5 @@
-import { Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { FC } from "react";
 
 const ComingSoonComponent: FC = () => {
@@ -30,11 +31,9 @@ const ComingSoonComponent: FC = () => {
           mx="auto"
           justifyContent="space-evenly"
         >
-          <Link href="/" style={{ flex: 1 }}>
-            <Button colorScheme="secondary" w="full">
-              Return to Store
-            </Button>
-          </Link>
+          <Button as={Link} href="/" colorScheme="secondary" w="full">
+            Return to Store
+          </Button>
         </Flex>
       </Flex>
     </Flex>
