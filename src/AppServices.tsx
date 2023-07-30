@@ -11,7 +11,6 @@ const AppServices: FC = ({ ...props }) => {
   return (
     <>
       <Script
-        async
         id="gtm-script"
         strategy="worker"
         src={
@@ -19,7 +18,7 @@ const AppServices: FC = ({ ...props }) => {
           firebaseConfig.measurementId
         }
       />
-      <Script strategy="worker" id="gtm-init" async>
+      <Script strategy="worker" id="gtm-init">
         {`
    window.dataLayer = window.dataLayer || [];
    window.gtag = function gtag(){window.dataLayer.push(arguments);}

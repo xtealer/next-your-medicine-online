@@ -5,10 +5,8 @@ import { NextPageWithLayout } from "@/types/Layout";
 import MainLayout from "@/layouts/main/MainLayout";
 import HomeProductsCarousel from "@/components/home/HomeProductsCarousel";
 import HomeAdvantageCards from "@/components/home/HomeAdvantageCards";
+import BackTopRow from "@/components/generic/BackTopRow";
 
-const BackTopRow = dynamic(() =>
-  import("@/components/generic/BackTopRow").then((m) => m)
-);
 const HomeAboutUsComponent = dynamic(() =>
   import("@/components/home/HomeAboutUsComponent").then((m) => m)
 );
