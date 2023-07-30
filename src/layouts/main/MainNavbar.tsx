@@ -87,6 +87,7 @@ const MainNavbar: FC = () => {
               width={LOGO_WIDTH}
               alt="Logo of Your Medicine Online"
               draggable={false}
+              priority
             />
           </Link>
         </Flex>
