@@ -113,6 +113,7 @@ class MyDocument extends Document {
 <link rel='apple-touch-startup-image' href='/images/apple_splash_750.png' sizes='750x1334' />
 <link rel='apple-touch-startup-image' href='/images/apple_splash_640.png' sizes='640x1136' /> */}
           <script
+            async
             data-partytown-config
             dangerouslySetInnerHTML={{
               __html: `
