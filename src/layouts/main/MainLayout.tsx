@@ -19,12 +19,17 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
       if (!window.location.hash) {
         scrollToTop("main-container");
       }
-      console.log("route change routeChangeComplete");
+
+      if (process.env.NODE_ENV === "development") {
+        console.log("route change routeChangeComplete");
+      }
     });
 
     return () => {
       router.events.off("routeChangeComplete", () => {
-        console.log("stopped");
+        if (process.env.NODE_ENV === "development") {
+          console.log("stopped");
+        }
       });
     };
   }, [router.events]);

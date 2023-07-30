@@ -1,4 +1,3 @@
-import useDidHydrate from "@/hooks/useDidHydrate";
 import { ImageItem } from "@/types/ImageItem";
 import {
   Breadcrumb,
@@ -36,44 +35,41 @@ const images = [
 ] as ImageItem[];
 
 const OzempicProduct: FC = () => {
-  const { didHydrate } = useDidHydrate();
-
   return (
     <Flex
       flexDirection="column"
       p={{ base: "8", sm: "10", md: "12" }}
       color="gray.800"
     >
-      {didHydrate && (
-        <Breadcrumb>
-          <BreadcrumbItem>
-            <BreadcrumbLink as={Link} href="/#shop" tabIndex={-1}>
-              Shop
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+      <Breadcrumb>
+        <BreadcrumbItem>
+          <BreadcrumbLink as={Link} href="/#shop" tabIndex={-1}>
+            Shop
+          </BreadcrumbLink>
+        </BreadcrumbItem>
 
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href="/products/ozempic-pen-2mg"
-              tabIndex={-1}
-            >
-              Products
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            as={Link}
+            href="/products/ozempic-pen-2mg"
+            tabIndex={-1}
+          >
+            Products
+          </BreadcrumbLink>
+        </BreadcrumbItem>
 
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink
-              href="/products/ozempic-pen-2mg"
-              color="primary._"
-              tabIndex={-1}
-              fontWeight="bold"
-            >
-              Ozempic Pen 2mg 1.5ml
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-      )}
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink
+            href="/products/ozempic-pen-2mg"
+            color="primary._"
+            tabIndex={-1}
+            fontWeight="bold"
+          >
+            Ozempic Pen 2mg 1.5ml
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+
       <Flex flexDirection="column" flex="1" px={{ base: "0", md: "6" }} pt="12">
         <Flex
           flexDirection={{ base: "column", md: "row" }}

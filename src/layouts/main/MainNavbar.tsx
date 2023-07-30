@@ -14,9 +14,9 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import useDidHydrate from "@/hooks/useDidHydrate";
 import { toggleSupport } from "@/helpers/tawkHelpers";
 import { NOOP } from "@/helpers/callbackHelpers";
+import useDidHydrate from "@/hooks/useDidHydrate";
 
 const routes = [
   { name: "Shop", path: "/#shop" },
@@ -39,11 +39,9 @@ const MainNavbar: FC = () => {
   const { didHydrate } = useDidHydrate();
   const btnRef = useRef<any>();
 
-  if (!didHydrate) {
-    return null;
-  }
-
-  const pathname = `${window.parent.location.pathname}${window.parent.location.hash}`;
+  const pathname = didHydrate
+    ? `${window.parent.location.pathname}${window.parent.location.hash}`
+    : "";
 
   return (
     <Flex flexDirection="column" as="header" w="full">
@@ -186,6 +184,16 @@ const MainNavbar: FC = () => {
                   pathMatch &&
                   routePathMatch &&
                   pathMatch[0] === routePathMatch[0];
+                const hasNoPath = !r.path;
+
+                const onClickItem = () => {
+                  if (hasNoPath) {
+                    const cb = r.onClick ?? NOOP;
+                    cb();
+                  }
+
+                  onClose();
+                };
 
                 const content = (
                   <Text
@@ -198,11 +206,11 @@ const MainNavbar: FC = () => {
                   </Text>
                 );
 
-                if (!r.path) {
+                if (hasNoPath) {
                   return (
                     <Flex
                       key={`${r.name}_${r.path}`}
-                      onClick={r.onClick ?? NOOP}
+                      onClick={onClickItem}
                       cursor="pointer"
                     >
                       {content}
@@ -211,7 +219,11 @@ const MainNavbar: FC = () => {
                 }
 
                 return (
-                  <Link key={`${r.name}_${r.path}`} href={r.path}>
+                  <Link
+                    key={`${r.name}_${r.path}`}
+                    href={r.path}
+                    onClick={onClickItem}
+                  >
                     {content}
                   </Link>
                 );
