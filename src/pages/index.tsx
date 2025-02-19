@@ -6,6 +6,7 @@ import MainLayout from "@/layouts/main/MainLayout";
 import HomeProductsCarousel from "@/components/home/HomeProductsCarousel";
 import HomeAdvantageCards from "@/components/home/HomeAdvantageCards";
 import BackTopRow from "@/components/generic/BackTopRow";
+import ComingSoonComponent from "@/components/generic/ComingSoonComponent";
 
 const HomeAboutUsComponent = dynamic(() =>
   import("@/components/home/HomeAboutUsComponent").then((m) => m)
@@ -24,7 +25,7 @@ const Home: NextPageWithLayout = () => {
       <HomeAdvantageCards />
       <HomeAboutUsComponent />
       <HomeFAQComponent /> */}
-      Coming Soon!
+      <ComingSoonComponent />
       <BackTopRow />
     </>
   );

@@ -4,6 +4,7 @@ import FAQContentComponent from "@/components/faq/FAQContentComponent";
 import { NextPageWithLayout } from "@/types/Layout";
 import MainLayout from "@/layouts/main/MainLayout";
 import BackTopRow from "@/components/generic/BackTopRow";
+import ComingSoonComponent from "@/components/generic/ComingSoonComponent";
 
 const FAQPage: NextPageWithLayout = () => {
   return (
@@ -12,7 +13,7 @@ const FAQPage: NextPageWithLayout = () => {
         <title>FAQ | Your Medicine Online</title>
       </Head>
       {/* <FAQContentComponent /> */}
-      Coming Soon!
+      <ComingSoonComponent />
       <BackTopRow />
     </>
   );
