@@ -13,19 +13,19 @@ const OzempicProductPage: NextPageWithLayout = () => {
     const router = useRouter();
   
     useEffect(() => {
-      router.replace(REDIRECT_URL);
+      router.replace("/");
     }, [router]);
   
     return null;
-  };
+
   return (
     <>
       <Head>
-        <title>Get Ozempic Pen 2mg / 1,5ml Now | Your Medicine Online</title>
+        {/* <title>Get Ozempic Pen 2mg / 1,5ml Now | Your Medicine Online</title>
         <meta
           name="keywords"
           content="Get Ozempic, Get Ozempic Pen, Buy Ozempic, Get Ozempic Now, Buy Ozempic Now, Ozempic,Ozempic Online,Ozempic Paypal,Ozempic USA,Your Medicine Online Ozempic,Your Medicine Online Ozempic Pen"
-        />
+        /> */}
       </Head>
       <OzempicProduct />
       <BackTopRow />
