@@ -13,7 +13,18 @@ import {
 } from "@chakra-ui/react";
 import { FC } from "react";
 
-const data = [];
+interface Description {
+  type: DescriptionTypeEnum;
+  value: string;
+}
+
+interface IPageContent {
+  title: string;
+  description: Description[];
+}
+
+const data: IPageContent[] = [
+];
 
 const FAQContentComponent: FC = () => {
   return (
