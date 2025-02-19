@@ -20,7 +20,7 @@ import useDidHydrate from "@/hooks/useDidHydrate";
 
 const routes = [
   { name: "Shop", path: "/#shop" },
-  { name: "Get Ozempic Pen Now", path: "/products/ozempic-pen-2mg" },
+  // { name: "Get Ozempic Pen Now", path: "/products/ozempic-pen-2mg" },
   { name: "FAQ", path: "/faq" },
   { name: "Blog", path: "/blog" },
   { name: "Quotes", onClick: toggleSupport },

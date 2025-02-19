@@ -117,9 +117,9 @@ const MainFooter: FC = () => {
             <Link href={"/#shop"}>
               <Text textColor="white">Store</Text>
             </Link>
-            <Link href={"/products/ozempic-pen-2mg"}>
+            {/* <Link href={"/products/ozempic-pen-2mg"}>
               <Text textColor="white">Get Ozempic Pens</Text>
-            </Link>
+            </Link> */}
             <Link href={"/faq"}>
               <Text textColor="white">FAQ</Text>
             </Link>
