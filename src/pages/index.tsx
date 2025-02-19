@@ -20,10 +20,11 @@ const Home: NextPageWithLayout = () => {
       <Head>
         <title>Shop | Your Medicine Online</title>
       </Head>
-      <HomeProductsCarousel />
+      {/* <HomeProductsCarousel />
       <HomeAdvantageCards />
       <HomeAboutUsComponent />
-      <HomeFAQComponent />
+      <HomeFAQComponent /> */}
+      Coming Soon!
       <BackTopRow />
     </>
   );

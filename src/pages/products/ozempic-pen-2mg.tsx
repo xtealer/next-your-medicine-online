@@ -5,8 +5,19 @@ import BackTopRow from "@/components/generic/BackTopRow";
 
 import OzempicProduct from "@/components/products/OzempicProduct";
 import { NextPageWithLayout } from "@/types/Layout";
+import { useRouter } from "next/router";
+
+import { useEffect } from "react";
 
 const OzempicProductPage: NextPageWithLayout = () => {
+    const router = useRouter();
+  
+    useEffect(() => {
+      router.replace(REDIRECT_URL);
+    }, [router]);
+  
+    return null;
+  };
   return (
     <>
       <Head>

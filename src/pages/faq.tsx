@@ -11,7 +11,8 @@ const FAQPage: NextPageWithLayout = () => {
       <Head>
         <title>FAQ | Your Medicine Online</title>
       </Head>
-      <FAQContentComponent />
+      {/* <FAQContentComponent /> */}
+      Coming Soon!
       <BackTopRow />
     </>
   );
